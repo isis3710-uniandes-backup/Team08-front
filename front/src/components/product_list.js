@@ -15,10 +15,8 @@ export default class ProductList extends React.Component {
 	}
 
 	// componentDidMount() {
-      
  //        fetch('/articulos')
- //            .then(function(response) {
-            	
+ //            .then(function(response) {          	
  //                return response.json();
  //            })
  //            .then(myJson => {
@@ -31,8 +29,7 @@ export default class ProductList extends React.Component {
 	// 				}
 	// 				products.push(product)
  //            	}
- //                this.setState({product_list:products});
-                
+ //                this.setState({product_list:products});               
  //                console.log(this.state.product_list);
  //            });
  //    }
@@ -41,20 +38,23 @@ export default class ProductList extends React.Component {
         return this.state.product_list.map((p) => (<Product key={p._id} product={p}/>));
     }
 
-    addProduct(){
-		console.log('hola');
+    show_all_product(){
+		window.location.href='all_products.html';
     }
 
     render() {
         return (
-        	<div className="" id="product_list">
-        		<h2 className="text-center">Productos</h2>
+        	<div className="container">
         		<div className="row">
-        			{this.renderProducts()}
-        		</div>
-        		<div className="float-right">
-        			<button type="button" onClick={this.addProduct} className="btn btn-info">+</button>
-        		</div>
+                    <div className="col-12"><h2 className="text-center">Productos</h2></div>
+                    <div className="col-12">
+                        <div className="row">
+                            {this.renderProducts()}
+                        </div>
+                    </div>
+                    <div className="col-6 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Ver todos</button></div>
+                    <div className="col-6 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Donar</button></div>
+                </div>
         	</div>
             
         );
