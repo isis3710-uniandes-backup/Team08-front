@@ -3,26 +3,62 @@ import Solicitud from './solicitud.js'
 
 export default class SolicitudList extends React.Component {
 
-    status = {"solicitud_list": [
-            {"_id": "1", "url_img": "/images/camiseta.jpg", "name": "Camiseta amarilla", "calidad": "3", "description":"Una camiseta muy linda." },
-            {"_id": "2", "url_img": "/images/carro_de_juguete.jpg", "name": "Carro de juguete", "calidad": "4", "description":"Una carro de control a pilas." },
-            {"_id": "3", "url_img": "/images/carro_de_juguete.jpg", "name": "Carro de juguete", "calidad": "4", "description":"Una carro de control a pilas." }
-        ] 
+   state = {
+        "solicitud_list":[]
     }
 
+    componentDidMount() {
+     
+        fetch('/solicitud')
+             .then(function(response) {
+                
+                 return response.json();
+             })
+             .then(myJson => {
+              console.log(myJson);
+              var count = 0;
+              var solicitudes=[];
+              for(var soli of myJson){
+                  if (count>5){
+                      break;
+                  }count++;
+                  solicitudes.push(soli)
+              }
+                 this.setState({solicitud_list:solicitudes});
+                
+                
+             });
+     }
+
     renderSolicitudes() {
-        return this.status.solicitud_list.map((p) => (<Solicitud key={p._id} solicitud={p}/>));
+        return this.state.solicitud_list.map((p) => (<Solicitud key={p.id} solicitud={p}/>));
+    }
+
+    addProduct(){
+        console.log('hola');
     }
 
     render() {
         return (
-            <div id ="sol_list" class="carousel-wrapper">
-            <div class="carousel" data-flickity>
-                    {this.renderSolicitudes()}
-  
-                </div>
-                <button type="button" className="btn btn-info">+</button>
-            </div>
+            
+ <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+  <div className="carousel-inner">
+  <div className="carousel-item active ">
+      <img className="d-block w-100" src= "https://www.internews.org/sites/default/files/styles/article_header/public/2017-12/passing%20supplies%20on%20boat.jpg?itok=wQIaeNzw"alt="0"/>
+    </div>
+    {this.renderSolicitudes()}
+    </div>
+  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+  </a>
+</div>
+
+            
             
         );
     }
