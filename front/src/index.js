@@ -5,3 +5,4 @@ import SolicitudList from "./components/solicitud_list";
 
 ReactDOM.render(<ProductList/>, document.getElementById("product_list"));
 ReactDOM.render(<SolicitudList/>, document.getElementById("solicitudes"));
+

@@ -48,7 +48,7 @@ export default class ProductList extends React.Component {
         		<div className="row">
                     <div className="col-12"><h2 className="text-center">Productos</h2></div>
                     <div className="col-12">
-                        <div className="row">
+                        <div class="grid-container d-flex align-items-stretch"> 
                             {this.renderProducts()}
                         </div>
                     </div>

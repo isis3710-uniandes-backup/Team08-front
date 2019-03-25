@@ -34,14 +34,14 @@ export default class SolicitudList extends React.Component {
         return this.state.solicitud_list.map((p) => (<Solicitud key={p.id} solicitud={p}/>));
     }
 
-    addProduct(){
-        console.log('hola');
-    }
+  
 
     render() {
         return (
             
  <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+
+ <h2 >Solicitudes en proceso</h2>
   <div className="carousel-inner">
   <div className="carousel-item active ">
       <img className="d-block w-100" src= "https://www.internews.org/sites/default/files/styles/article_header/public/2017-12/passing%20supplies%20on%20boat.jpg?itok=wQIaeNzw"alt="0"/>
