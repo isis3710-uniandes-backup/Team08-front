@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from './product.js'
-
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 export default class ProductList extends React.Component {
 
     state = {
@@ -42,8 +42,13 @@ export default class ProductList extends React.Component {
 		window.location.href='add_product.html';
     }
 
+    User(){
+        return (<h2>User</h2>);
+    }
+
     render() {
         return (
+            <Router>
         	<div className="container">
         		<div className="row">
                     <div className="col-12"><h2 className="text-center">Productos</h2></div>
@@ -52,9 +57,11 @@ export default class ProductList extends React.Component {
                             {this.renderProducts()}
                         </div>
                     </div>
-                    <div className="col-12 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Donar</button></div>
+                        <div className="col-12 text-center"><button type="button" className="btn btn-dark"><Link to="/add_product/">Donar</Link></button></div>
+                        <Route path="/add_product/" component={this.User} />
                 </div>
         	</div>
+            </Router>
             
         );
     }
