@@ -39,7 +39,7 @@ export default class ProductList extends React.Component {
     }
 
     show_all_product(){
-		window.location.href='all_products.html';
+		window.location.href='add_product.html';
     }
 
     render() {
@@ -52,8 +52,7 @@ export default class ProductList extends React.Component {
                             {this.renderProducts()}
                         </div>
                     </div>
-                    <div className="col-6 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Ver todos</button></div>
-                    <div className="col-6 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Donar</button></div>
+                    <div className="col-12 text-center"><button type="button" onClick={this.show_all_product} className="btn btn-dark">Donar</button></div>
                 </div>
         	</div>
             
