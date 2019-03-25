@@ -14,25 +14,25 @@ export default class ProductList extends React.Component {
 		]
 	}
 
-	// componentDidMount() {
- //        fetch('/articulos')
- //            .then(function(response) {          	
- //                return response.json();
- //            })
- //            .then(myJson => {
- //            	console.log(myJson);
- //            	var count = 0;
- //            	var products=[];
- //            	for(var product of myJson){
-	// 				if (count>5){
-	// 					break;
-	// 				}
-	// 				products.push(product)
- //            	}
- //                this.setState({product_list:products});               
- //                console.log(this.state.product_list);
- //            });
- //    }
+	componentDidMount() {
+        fetch('/articulos')
+            .then(function(response) {          	
+                return response.json();
+            })
+            .then(myJson => {
+            	console.log(myJson);
+            	var count = 0;
+            	var products=[];
+            	for(var product of myJson){
+					if (count>5){
+						break;
+					}
+					products.push(product)
+            	}
+                this.setState({product_list:products});               
+                console.log(this.state.product_list);
+            });
+    }
 
     renderProducts() {
         return this.state.product_list.map((p) => (<Product key={p._id} product={p}/>));
@@ -48,7 +48,6 @@ export default class ProductList extends React.Component {
 
     render() {
         return (
-            <Router>
         	<div className="container">
         		<div className="row">
                     <div className="col-12"><h2 className="text-center">Productos</h2></div>
@@ -57,11 +56,11 @@ export default class ProductList extends React.Component {
                             {this.renderProducts()}
                         </div>
                     </div>
-                        <div className="col-12 text-center"><button type="button" className="btn btn-dark"><Link to="/add_product/">Donar</Link></button></div>
-                        <Route path="/add_product/" component={this.User} />
-                </div>
+                        <div className="col-12 text-center">
+                            <button type="button" className="btn btn-dark"><Link to="/add_product/">Donar</Link></button>
+                        </div>
+                    </div>
         	</div>
-            </Router>
             
         );
     }

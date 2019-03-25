@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ProductList from "./components/product_list";
-import SolicitudList from "./components/solicitud_list";
+import App from "./components/app";
 
-ReactDOM.render(<ProductList/>, document.getElementById("product_list"));
-ReactDOM.render(<SolicitudList/>, document.getElementById("solicitudes"));
+
+ReactDOM.render(<App/>, document.getElementById("root"));
+// ReactDOM.render(<ProductList/>, document.getElementById("product_list"));
+// ReactDOM.render(<SolicitudList/>, document.getElementById("solicitudes"));
 
