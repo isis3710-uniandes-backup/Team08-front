@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ProductList from "./product_list";
 import SolicitudList from "./solicitud_list";
+import MyForm from "./MyForm";
 
 export default class App extends React.Component {
 
@@ -233,9 +234,31 @@ export default class App extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/add_product/">Donar</Link>
               </li>
+              <li class="nav-item">
+                   <button  class="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
+                </li>
             </ul>
           </div>
         </nav>
+
+        <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cree su Solicitud</h4>
+      </div>
+      <div id = "elfooter">
+          <MyForm/>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         <Route path="/" exact component={this.Inicio} />
         <Route path="/add_product/" component={this.Donar} />
