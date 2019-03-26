@@ -19,9 +19,11 @@ handleClick = userId => {
     // do what you want with the response here
   });
 }
+//onClick= {this.handleClick(x)}
+//var x = this.props.solicitud.id;
 
     render() {
-var x = this.props.solicitud.id;
+
         return (
 
             <div className="card">
@@ -39,7 +41,8 @@ var x = this.props.solicitud.id;
        <p>Cantidad Faltante: {this.props.solicitud.cantidadFaltante}</p>
        <p>Url de la Imagen: {this.props.solicitud.picture}</p>
        <p>Registrado: {this.props.solicitud.registered}</p>
-       <button type="button" onClick= {this.handleClick(x)} className="btn btn-danger">Borrar</button>
+       <button type="button"  className="btn btn-danger">Borrar</button>
+
       </div>
     </div>
   </div>
