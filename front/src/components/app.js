@@ -4,6 +4,7 @@ import ProductList from "./product_list";
 import SolicitudList from "./solicitud_list";
 import MyForm from "./MyForm";
 import Points from "./points"
+import MisSolicitudes from "./misSolicitudes"
 
 export default class App extends React.Component {
 
@@ -219,6 +220,19 @@ export default class App extends React.Component {
       );
   }
 
+  miSolicitudes=()=>{
+    return (
+      <div className="container text-center">
+        <hr/>
+        <h2>¡Actualmente estas son sus solicitudes!</h2>
+        <hr/>
+        <MisSolicitudes/>
+        <br/>
+        <Link to="/"><button className="btn btn-dark">Volver a inicio</button></Link>
+      </div>
+      );
+  }
+
   render() {
     return (
       <Router>
@@ -237,7 +251,7 @@ export default class App extends React.Component {
                 <Link className="nav-link" to="/add_product/">Donar</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/accumulated_points/">Mis puntos</Link>
+                <Link className="nav-link" to="/misSolicitudes/">Mis Solicitudes</Link>
               </li>
               <li class="nav-item">
                    <button  class="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
@@ -267,6 +281,8 @@ export default class App extends React.Component {
 
         <Route path="/" exact component={this.Inicio} />
         <Route path="/add_product/" component={this.Donar} />
+        <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
+
       
       </Router>
     );

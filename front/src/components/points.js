@@ -29,13 +29,13 @@ componentDidMount() {
         <h3>POINTS VALUE</h3>
             <div className="progress">
             
-  <div id= "barra1" className="progress-bar progress-bar-striped" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.pointsValue}</div>
+  <div id= "barra1" className="progress-bar " role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.pointsValue}</div>
 </div>
 <br/>
 <h3>STOCK</h3>
 
 <div className="progress">
-  <div id= "barra2" className="progress-bar progress-bar-striped" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.stock}</div>
+  <div id= "barra2" className="progress-bar " role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.stock}</div>
 </div>
 <br/>
  </div>
