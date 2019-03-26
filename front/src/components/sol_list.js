@@ -1,7 +1,7 @@
 import React from 'react';
-import Solicitud from './solicitud.js'
+import Solicitud from './sol.js'
 
-export default class SolicitudList extends React.Component {
+export default class SoliList extends React.Component {
 
    state = {
         "solicitud_list":[]
@@ -38,25 +38,21 @@ export default class SolicitudList extends React.Component {
 
     render() {
         return (
-            
- <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 
- <h2 >Solicitudes en proceso</h2>
-  <div className="carousel-inner">
-  <div className="carousel-item active ">
-      <img className="d-block w-100" src= "https://www.internews.org/sites/default/files/styles/article_header/public/2017-12/passing%20supplies%20on%20boat.jpg?itok=wQIaeNzw"alt="0"/>
-    </div>
-    {this.renderSolicitudes()}
-    </div>
-  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
-  </a>
-  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
-  </a>
-</div>
+     <div className = "album py-5 bg-light" >  
+     <div className = "conteiner">
+     <div className = "row">
+     
+   {this.renderSolicitudes()}
+
+  </div>
+  </div>
+  </div>
+
+ 
+
+            
+
 
             
             
