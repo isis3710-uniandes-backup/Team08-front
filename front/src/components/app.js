@@ -95,6 +95,9 @@ export default class App extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/add_product/">Donar</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/accumulated_points/">Mis puntos</Link>
+              </li>
             </ul>
           </div>
         </nav>
