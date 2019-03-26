@@ -8,15 +8,15 @@ import MisSolicitudes from "./misSolicitudes";
 import AgregarDonacion from "./agregar_donacion";
 import FormDonacion from './form_donacion.js';
 import VerDonaciones from './ver_donaciones';
+import Sol_list from "./sol_list";
 
 export default class App extends React.Component {
 
   
   renderAcerca(){
     return (
-        <div id="acerca" className="text-center">
-          <hr/>
-          <h2>Acerca de DONU</h2>
+        <div className="col-12">
+          <h5>Acerca de DONU</h5>
           <p>Donu es una plataforma web que pretender facilitar el proceso de donaciones entre las personas y las ONG En esta plataforma pretendemos que tanto los usuario y las ong puedan decir los elementos que pueden donar y los que realmente necesitan.</p>
           <hr/>
         </div>
@@ -75,8 +75,13 @@ export default class App extends React.Component {
         <hr/>
         <div className="row">
           <div className="col-6">
-            <h5>¿Estás interesado en donar?</h5>
-            <p>¡Realiza una donación, mira la evidencia de tus buenas acciones y gana puntos con tan sólo un click!</p>
+            <div className="row">
+            {this.renderAcerca()}
+            <div className="col-12">
+              <h5>¿Estás interesado en donar?</h5>
+              <p>¡Realiza una donación, mira la evidencia de tus buenas acciones y gana puntos con tan sólo un click!</p>
+            </div>
+          </div>
           </div>
           <div className="col-6">
             <FormDonacion/>
@@ -88,7 +93,6 @@ export default class App extends React.Component {
           <ListaDonacion max={3}/>
           <button type="button" className="btn btn-dark"><Link to="/donaciones/">Ver más</Link></button>
         </div>
-        {this.renderAcerca()}
         <Points/>
         {this.renderFooter()}
       </div>
@@ -111,6 +115,18 @@ export default class App extends React.Component {
         <h2>¡Actualmente estas son sus solicitudes!</h2>
         <hr/>
         <MisSolicitudes/>
+        <br/>
+        <Link to="/"><button className="btn btn-dark">Volver a inicio</button></Link>
+      </div>
+      );
+  }
+  soli=()=>{
+    return (
+      <div className="container text-center">
+        <hr/>
+        <h2>¡No esperes más para ayudar a los demás!</h2>
+        <hr/>
+        <Sol_list/>
         <br/>
         <Link to="/"><button className="btn btn-dark">Volver a inicio</button></Link>
       </div>
@@ -143,33 +159,36 @@ export default class App extends React.Component {
                 <Link className="nav-link" to="/misSolicitudes/">Mis Solicitudes</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/soli/">Solicitudes</Link>
+              </li>
+              <li className="nav-item">
                    <button  className="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
               </li>
             </ul>
           </div>
         </nav>
+
         <div id="myModal" className="modal fade" role="dialog">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">Cree su Solicitud</h4>
-            </div>
-            <div id = "elfooter">
-                <MyForm/>
+          <div className="modal-dialog">            
+            <div className="modal-content">
+              <div className="modal-header">
+                <h4 className="modal-title">Cree su Solicitud</h4>
               </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+              <div id = "elfooter">
+                  <MyForm/>
+                </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
-</div>
 
         <Route path="/" exact component={this.Inicio} />
         <Route path="/agregar_donacion/" component={this.Donar} />
         <Route path="/donaciones/" component={this.Donaciones} />
         <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
-
-      
+        <Route path= "/soli" component= {this.soli}/>
       </Router>
     );
   }
