@@ -12,6 +12,7 @@ handleClick = userId => {
   // Note: I'm using arrow functions inside the `.fetch()` method.
   // This makes it so you don't have to bind component functions like `setState`
   // to the component.
+  console.log("este es el id:"+userId)
   fetch("/solicitud/" + userId, requestOptions).then((response) => {
     
   }).then((result) => {
@@ -20,7 +21,7 @@ handleClick = userId => {
 }
 
     render() {
-const x = this.props.solicitud.id;
+var x = this.props.solicitud.id;
         return (
 
             <div className="card">
@@ -38,7 +39,7 @@ const x = this.props.solicitud.id;
        <p>Cantidad Faltante: {this.props.solicitud.cantidadFaltante}</p>
        <p>Url de la Imagen: {this.props.solicitud.picture}</p>
        <p>Registrado: {this.props.solicitud.registered}</p>
-       <button type="button" onClick = {this.handleClick(x)} className="btn btn-danger">Borrar</button>
+       <button type="button" onClick= {this.handleClick(x)} className="btn btn-danger">Borrar</button>
       </div>
     </div>
   </div>
