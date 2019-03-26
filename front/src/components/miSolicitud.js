@@ -3,7 +3,24 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 export default class MiSolicitud extends React.Component {
 
 
+
+handleClick = userId => {
+  const requestOptions = {
+    method: 'DELETE'
+  };
+
+  // Note: I'm using arrow functions inside the `.fetch()` method.
+  // This makes it so you don't have to bind component functions like `setState`
+  // to the component.
+  fetch("/solicitud/" + userId, requestOptions).then((response) => {
+    
+  }).then((result) => {
+    // do what you want with the response here
+  });
+}
+
     render() {
+const x = this.props.solicitud.id;
         return (
 
             <div className="card">
@@ -21,6 +38,7 @@ export default class MiSolicitud extends React.Component {
        <p>Cantidad Faltante: {this.props.solicitud.cantidadFaltante}</p>
        <p>Url de la Imagen: {this.props.solicitud.picture}</p>
        <p>Registrado: {this.props.solicitud.registered}</p>
+       <button type="button" onClick = {this.handleClick(x)} className="btn btn-danger">Borrar</button>
       </div>
     </div>
   </div>

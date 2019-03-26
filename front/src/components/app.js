@@ -117,26 +117,26 @@ export default class App extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/misSolicitudes/">Mis Solicitudes</Link>
               </li>
-              <li class="nav-item">
-                   <button  class="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
+              <li className="nav-item">
+                   <button  className="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
               </li>
             </ul>
           </div>
         </nav>
 
-        <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+        <div id="myModal" className="modal fade" role="dialog">
+  <div className="modal-dialog">
 
     
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Cree su Solicitud</h4>
+    <div className="modal-content">
+      <div className="modal-header">
+        <h4 className="modal-title">Cree su Solicitud</h4>
       </div>
       <div id = "elfooter">
           <MyForm/>
         </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 
