@@ -71,6 +71,35 @@ export default class App extends React.Component {
   
   Inicio=()=>{
     return (
+    <div>
+    <div id="demo1" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators" >
+    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+    <li data-target="#demo1" data-slide-to="1" class=""></li>
+    <li data-target="#demo1" data-slide-to="2" class=""></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.care.org/sites/default/files/styles/16x6_1600x600/public/image/rs29137_farese-20170401_haiti_419-lpr-news2.png?itok=klKXCnSU&timestamp=1547151732" alt="Los Angeles" />
+      <div class="centered"></div>  
+
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="Chicago"  />
+      <div class="centered2"></div>    
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.unicef.org/rosa/sites/unicef.org.rosa/files/styles/media_banner/public/2018-03/IMG_6784.jpg?itok=Rna6_Tro" alt="New York"  />
+      <div class="centered3"></div>       
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
       <div className="container">
         <hr/>
         <div className="row">
@@ -96,6 +125,7 @@ export default class App extends React.Component {
         <hr/>
         <Points/>
         {this.renderFooter()}
+      </div>
       </div>
       );
   }
