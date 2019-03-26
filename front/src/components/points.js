@@ -1,45 +1,46 @@
-import React, { Component } from 'react';
-import '../styles/points.css';
-
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 
-class points extends Component {
+
+export default class points extends React.Component {
+
+    state = {
+        "benefits_list":[]
+    }
+
+componentDidMount() {
+        fetch('/benefit/5c7b3dd2006bf3210b17262f')
+            .then(function(response) {              
+                return response.json();
+            })
+            .then(myJson => {
+                
+                this.setState({benefits_list:myJson});               
+                console.log(this.state.benefits_list);
+            });
+    }
   render() {
     //debugger;
     return (
         <div>
-            <h1>hola</h1>
-        <Container>
-            <Row>
-                <Col>1 of 2</Col>
-                <Col>2 of 2</Col>
-            </Row>
-            <Row>
-                <Col>1 of 2</Col>
-                <Col>2 of 2</Col>
-            </Row>
-            <Row>
-                <Col>1 of 3</Col>
-                <Col>2 of 3</Col>
-                <Col>3 of 3</Col>
-            </Row>
-            <Row>
-                <Col>1 of 3</Col>
-                <Col>2 of 3</Col>
-                <Col>3 of 3</Col>
-            </Row>
-            <Row>
-                <Col>1 of 3</Col>
-                <Col>2 of 3</Col>
-                <Col>3 of 3</Col>
-            </Row>
-        </Container>
-        </div>
+        <h2> Puntos Acumulado Actulmente</h2>
+        <br/>
+        <h3>POINTS VALUE</h3>
+            <div className="progress">
+            
+  <div id= "barra1" className="progress-bar progress-bar-striped" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.pointsValue}</div>
+</div>
+<br/>
+<h3>STOCK</h3>
+
+<div className="progress">
+  <div id= "barra2" className="progress-bar progress-bar-striped" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.stock}</div>
+</div>
+<br/>
+ </div>
     );
   }
 }
 
-export default points;
+

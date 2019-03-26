@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ProductList from "./product_list";
 import SolicitudList from "./solicitud_list";
 import MyForm from "./MyForm";
+import Points from "./points"
 
 export default class App extends React.Component {
 
@@ -195,6 +196,7 @@ export default class App extends React.Component {
         <SolicitudList/>
         <ProductList/>
         {this.renderAcerca()}
+        <Points/>
         {this.renderFooter()}
       </div>
       );
