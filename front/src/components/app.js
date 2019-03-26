@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import ProductList from "./product_list";
+import ListaDonacion from "./lista_donacion";
 import SolicitudList from "./solicitud_list";
 import MyForm from "./MyForm";
 import Points from "./points";
 import MisSolicitudes from "./misSolicitudes";
-import AddProduct from "./add_product";
+import AgregarDonacion from "./agregar_donacion";
+import FormDonacion from './form_donacion.js';
+import VerDonaciones from './ver_donaciones';
 
 export default class App extends React.Component {
 
@@ -69,9 +71,23 @@ export default class App extends React.Component {
   
   Inicio=()=>{
     return (
-      <div>
-        <SolicitudList/>
-        <ProductList/>
+      <div className="container">
+        <hr/>
+        <div className="row">
+          <div className="col-6">
+            <h5>¿Estás interesado en donar?</h5>
+            <p>¡Realiza una donación, mira la evidencia de tus buenas acciones y gana puntos con tan sólo un click!</p>
+          </div>
+          <div className="col-6">
+            <FormDonacion/>
+          </div>
+        </div>
+        <hr/>
+        <div className="text-center">
+          <h3 className="text-left">Algunas donaciones hechas:</h3>
+          <ListaDonacion max={3}/>
+          <button type="button" className="btn btn-dark"><Link to="/donaciones/">Ver más</Link></button>
+        </div>
         {this.renderAcerca()}
         <Points/>
         {this.renderFooter()}
@@ -81,7 +97,11 @@ export default class App extends React.Component {
 
 
   Donar=()=>{
-    return (<AddProduct/>);
+    return (<AgregarDonacion/>);
+  }
+
+  Donaciones=()=>{
+    return (<VerDonaciones/>);
   }
 
   miSolicitudes=()=>{
@@ -100,8 +120,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-      
-        <nav className="navbar navbar-expand-sm  bg-dark fixed-top">
+        <nav id="navvv" className="navbar navbar-expand-sm  bg-dark fixed-top">
           <Link to="/" className="navbar-brand"><img src="/images/donu_logo.png" alt="Donu logo" weigth="40px;" height="40px;"/></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -111,40 +130,43 @@ export default class App extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/">Inicio</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/add_product/">Donar</Link>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Donaciones
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <Link className="dropdown-item" to="/agregar_donacion/">Donar</Link>
+                  <Link className="dropdown-item" to="/donaciones/">Ver donaciones</Link>
+                </div>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/misSolicitudes/">Mis Solicitudes</Link>
               </li>
-              <li class="nav-item">
-                   <button  class="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
+              <li className="nav-item">
+                   <button  className="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
               </li>
             </ul>
           </div>
         </nav>
-
-        <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Cree su Solicitud</h4>
-      </div>
-      <div id = "elfooter">
-          <MyForm/>
+        <div id="myModal" className="modal fade" role="dialog">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Cree su Solicitud</h4>
+            </div>
+            <div id = "elfooter">
+                <MyForm/>
+              </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
 </div>
 
         <Route path="/" exact component={this.Inicio} />
-        <Route path="/add_product/" component={this.Donar} />
+        <Route path="/agregar_donacion/" component={this.Donar} />
+        <Route path="/donaciones/" component={this.Donaciones} />
         <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
 
       

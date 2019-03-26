@@ -1,10 +1,10 @@
 import React from 'react';
-import Product from './product.js'
+import Donacion from './donacion.js'
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
-export default class ProductList extends React.Component {
+export default class ListaDonacion extends React.Component {
 
     state = {
-    	"product_list":[
+    	"donacion_lista":[
     		{"id": "1",  "url_img": "http://www.prolaboral.es/WebRoot/StoreES/Shops/63783229/5123/5393/DEC2/730E/A3C6/C0A8/28B8/6AA8/camiseta-tecnica-hombre-montecarlo-amarillo-fluor.jpg","name": "Camiseta amarilla", "quality": "3", "description":"Una camiseta muy linda." },
     		{"id": "2", "url_img": "https://www.tenemosdetodo.com.ec/1041-large_default/carro-juguete-jeep-qbaby-520.jpg", "name": "Carro de juguete", "quality": "4", "description":"Una carro de control a pilas." },
     		{"id": "3", "url_img": "https://www.luciabe.com/4981-thickbox_default/libro-no-me-da-la-vida.jpg", "name": "No me da la vida", "quality": "5", "description":"Un excelente libro en buenas condiciones." },
@@ -20,26 +20,21 @@ export default class ProductList extends React.Component {
                 return response.json();
             })
             .then(myJson => {
-            	console.log(myJson);
-            	var count = 0;
-            	var products=[];
-            	for(var product of myJson){
-					if (count>5){
+            	var count = this.props.max;
+            	var donaciones=[];
+            	for(var donacion of myJson){
+					if (count==0){
 						break;
 					}
-					products.push(product)
+					donaciones.push(donacion);
+                    count-=1;
             	}
-                this.setState({product_list:products});               
-                console.log(this.state.product_list);
+                this.setState({donacion_lista:donaciones});   
             });
     }
 
     renderProducts() {
-        return this.state.product_list.map((p) => (<Product key={p.id} product={p}/>));
-    }
-
-    show_all_product(){
-		window.location.href='add_product.html';
+        return this.state.donacion_lista.map((p) => (<Donacion key={p.id} donacion={p}/>));
     }
 
     User(){
@@ -48,18 +43,10 @@ export default class ProductList extends React.Component {
 
     render() {
         return (
-        	<div className="container">
-        		<div className="row">
-                    <div className="col-12"><h2 className="text-center">Productos</h2></div>
-                    <div className="col-12">
-                        <div className="grid-container d-flex align-items-stretch"> 
-                            {this.renderProducts()}
-                        </div>
-                    </div>
-                        <div className="col-12 text-center">
-                            <button type="button" className="btn btn-dark"><Link to="/add_product/">Donar</Link></button>
-                        </div>
-                    </div>
+        	<div className="text-center">
+                <div className="row"> 
+                    {this.renderProducts()}
+                </div>
         	</div>
             
         );
