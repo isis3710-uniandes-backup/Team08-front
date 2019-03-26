@@ -38,7 +38,7 @@ export default class MisSolicitudes extends React.Component {
   
 render() {
     return (
-        <div>
+        <div className = "cartita">
         <div className="accordion" id="accordionExample">
   <div className="card">
     <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">

@@ -38,6 +38,7 @@ componentDidMount() {
   <div id= "barra2" className="progress-bar " role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{this.state.benefits_list.stock}</div>
 </div>
 <br/>
+<br/>
  </div>
     );
   }

@@ -93,6 +93,7 @@ export default class App extends React.Component {
           <ListaDonacion max={3}/>
           <button type="button" className="btn btn-dark"><Link to="/donaciones/">Ver más</Link></button>
         </div>
+        <hr/>
         <Points/>
         {this.renderFooter()}
       </div>
