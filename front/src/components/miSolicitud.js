@@ -4,7 +4,9 @@ export default class MiSolicitud extends React.Component {
 
 
 
-handleClick = userId => {
+handleSubmit(userId) {
+    
+var userId1 = userId.id;
   const requestOptions = {
     method: 'DELETE'
   };
@@ -12,12 +14,15 @@ handleClick = userId => {
   // Note: I'm using arrow functions inside the `.fetch()` method.
   // This makes it so you don't have to bind component functions like `setState`
   // to the component.
-  console.log("este es el id:"+userId)
+  console.log(userId)
   fetch("/solicitud/" + userId, requestOptions).then((response) => {
     
   }).then((result) => {
     // do what you want with the response here
   });
+    } 
+handleClick = userId => {
+  
 }
 //onClick= {this.handleClick(x)}
 //var x = this.props.solicitud.id;
@@ -41,7 +46,9 @@ handleClick = userId => {
        <p>Cantidad Faltante: {this.props.solicitud.cantidadFaltante}</p>
        <p>Url de la Imagen: {this.props.solicitud.picture}</p>
        <p>Registrado: {this.props.solicitud.registered}</p>
-       <button type="button"  className="btn btn-danger">Borrar</button>
+
+       
+       <button type="button" onClick = {this.handleSubmit.bind(this.props.solicitud)}  className="btn btn-danger">Borrar</button>
 
       </div>
     </div>

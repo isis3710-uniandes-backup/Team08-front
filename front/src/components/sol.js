@@ -2,18 +2,21 @@ import React from 'react';
 
 export default class sol extends React.Component {
 
+state = {
+
+  "id" : []
+}
 
 
-handleSubmit() {
+handleSubmit(id, cantidadActual) {
     
-var userId = this.props.solicitud.id;
-   var cantidadActual = this.props.solicitud.id;
-    var canNueva = cantidadActual+100;
+var canNueva = cantidadActual+100;
+    
 
+console.log(this.state.id +"+");
+console.log(cantidadActual+"-");
 
-
-
-        fetch("/solicitud", {
+        fetch("/solicitud/"+id, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -51,15 +54,14 @@ var userId = this.props.solicitud.id;
 
     } 
 
-    handleSubmit2() {
+    handleSubmit2(id, cantidadActual) {
     
-var userId = this.props.solicitud.id;
-   var cantidadActual = this.props.solicitud.id;
-    var canNueva = cantidadActual+100;
+
+    var canNueva = cantidadActual+1000;
 
    
 
-        fetch("/solicitud", {
+        fetch("/solicitud/"+id, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -75,6 +77,8 @@ var userId = this.props.solicitud.id;
     } 
 
     render() {
+
+      
         return (
             
            
@@ -91,9 +95,10 @@ var userId = this.props.solicitud.id;
 
     <div className="bd-example ">
 
-<button type="button" onClick={this.handleSubmit} className="btn btn-outline-dark lalo">$100</button>
-<button type="button" onClick={this.handleSubmit1} className="btn btn-outline-dark lalo">$500</button>
-<button type="button" onClick={this.handleSubmit2} className="btn btn-outline-dark lalo">$1000</button>
+<button type="button" onClick={this.handleSubmit.bind(this.props.solicitud.id,this.props.solicitud.cantidadFaltante)} className="btn btn-outline-dark lalo">$100</button>
+<button type="button" onClick={this.handleSubmit.bind(this.props.solicitud.id,this.props.solicitud.cantidadFaltante)} className="btn btn-outline-dark lalo">$500</button>
+<button type="button" onClick={this.handleSubmit.bind(this.props.solicitud.id,this.props.solicitud.cantidadFaltante)} className="btn btn-outline-dark lalo">$1000</button>
+
 
 </div>
   </div>
