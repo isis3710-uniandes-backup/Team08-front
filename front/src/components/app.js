@@ -82,7 +82,7 @@ export default class App extends React.Component {
     <div class="carousel-item active">
       <img className="demo0 img-fluid" src="https://www.care.org/sites/default/files/styles/16x6_1600x600/public/image/rs29137_farese-20170401_haiti_419-lpr-news2.png?itok=klKXCnSU&timestamp=1547151732" alt="Los Angeles" />
       <div className="centered"></div>  
-
+hola
     </div>
     <div class="carousel-item">
       <img className="demo0 img-fluid" src="https://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="Chicago"  />
@@ -120,7 +120,7 @@ export default class App extends React.Component {
         <div className="text-center">
           <h3 className="text-left">Algunas donaciones hechas:</h3>
           <ListaDonacion max={3}/>
-          <button type="button" className="btn btn-dark"><Link to="/donaciones/">Ver más</Link></button>
+          <button type="button" className="btn btn-dark" text-white><Link to="/donaciones/">Ver más</Link></button>
         </div>
         <hr/>
         <Points/>
@@ -196,7 +196,7 @@ export default class App extends React.Component {
               <li className="nav-item">
 
                    <button id="botoncito" className="nav-link bg-white"  data-target="#myModal">Crear Solicitud</button>
-              </li>
+              </li> 
             </ul>
           </div>
         </nav>
