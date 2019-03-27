@@ -71,33 +71,33 @@ export default class App extends React.Component {
   
   Inicio=()=>{
     return (
-    <div>
-    <div id="demo1" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators" >
+    <div >
+    <div id="demo1" className="carousel slide" data-ride="carousel">
+  <ul className="carousel-indicators" >
     <li data-target="#demo1" data-slide-to="0" class="active"></li>
     <li data-target="#demo1" data-slide-to="1" class=""></li>
     <li data-target="#demo1" data-slide-to="2" class=""></li>
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://www.care.org/sites/default/files/styles/16x6_1600x600/public/image/rs29137_farese-20170401_haiti_419-lpr-news2.png?itok=klKXCnSU&timestamp=1547151732" alt="Los Angeles" />
-      <div class="centered"></div>  
+      <img className="demo0 img-fluid" src="https://www.care.org/sites/default/files/styles/16x6_1600x600/public/image/rs29137_farese-20170401_haiti_419-lpr-news2.png?itok=klKXCnSU&timestamp=1547151732" alt="Los Angeles" />
+      <div className="centered"></div>  
 
     </div>
     <div class="carousel-item">
-      <img src="https://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="Chicago"  />
-      <div class="centered2"></div>    
+      <img className="demo0 img-fluid" src="https://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="Chicago"  />
+      <div className="centered2"></div>    
     </div>
-    <div class="carousel-item">
-      <img src="https://www.unicef.org/rosa/sites/unicef.org.rosa/files/styles/media_banner/public/2018-03/IMG_6784.jpg?itok=Rna6_Tro" alt="New York"  />
-      <div class="centered3"></div>       
+    <div className="carousel-item">
+      <img className="demo0 img-fluid" src="https://www.unicef.org/rosa/sites/unicef.org.rosa/files/styles/media_banner/public/2018-03/IMG_6784.jpg?itok=Rna6_Tro" alt="New York"  />
+      <div className="centered3"></div>       
     </div>
   </div>
-  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+  <a className="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span className="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#demo1" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
+  <a className="carousel-control-next" href="#demo1" data-slide="next">
+    <span className="carousel-control-next-icon"></span>
   </a>
 </div>
       <div className="container">
@@ -167,18 +167,19 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <nav id="navvv" className="navbar navbar-expand-sm  bg-dark fixed-top">
+
+        <nav id="navvv" className="navbar navbar-expand-sm   fixed-top">
           <Link to="/" className="navbar-brand"><img src="/images/donu_logo.png" alt="Donu logo" weigth="40px;" height="40px;"/></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div id="navbarCollapse" className="collapse navbar-collapse">
-            <ul className="nav navbar-nav top-nav">
+          <div id="probar" className="collapse navbar-collapse ">
+            <ul className="nav navbar-nav navbar-center ">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Inicio</Link>
+                <Link className="nav-link text-dark" to="/">Inicio</Link>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Donaciones
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -187,17 +188,20 @@ export default class App extends React.Component {
                 </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/misSolicitudes/">Mis Solicitudes</Link>
+                <Link className="nav-link text-dark" to="/misSolicitudes/">Mis Solicitudes</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/soli/">Solicitudes</Link>
+                <Link className="nav-link text-dark" to="/soli/">Solicitudes</Link>
               </li>
               <li className="nav-item">
-                   <button  className="nav-link" data-toggle="modal" data-target="#myModal">Crear Solicitud</button>
+
+                   <button id="botoncito" className="nav-link bg-white"  data-target="#myModal">Crear Solicitud</button>
               </li>
             </ul>
           </div>
         </nav>
+
+
 
         <div id="myModal" className="modal fade" role="dialog">
           <div className="modal-dialog">            
