@@ -78,4 +78,8 @@ Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos enco
 ![3 - Screen 2](https://user-images.githubusercontent.com/20799456/55192647-f7619580-5172-11e9-94ac-880ca3eb27d6.png)
 ![1 - Screen 3](https://user-images.githubusercontent.com/20799456/55192648-f7619580-5172-11e9-96dc-64d5481dcc5d.png)
 
+## Creación de donacion 
+
+![1 - Screen 3](https://user-images.githubusercontent.com/20799456/55193611-7b1c8180-5175-11e9-929a-8147b6386ddb.png)
+
 # UI/TESTS CARD SORTING
