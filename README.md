@@ -27,11 +27,44 @@ Dentro de Team08-front realizar
 Encontrarás la aplicación desplegada en [http://localhost:3000/](http://localhost:3000/).
 
 # FUNCIONALIDADES
+## USUARIO DONADOR
 
-
-|![browser-visualization (1)](https://user-images.githubusercontent.com/20799456/54962852-70bf7500-4f34-11e9-9c80-8f0787f9bc4c.png)|Visualización|
+|![donation](https://user-images.githubusercontent.com/20799456/55184780-063f4c80-5161-11e9-9508-530b4284f83a.png)|Creación de donaciones|
 |--------|--------|
-|![image](https://user-images.githubusercontent.com/20799456/54962925-c005a580-4f34-11e9-9dd4-b29980925072.png)|Productos que los donadores han posteado. Por cada producto se puede ver una descripción y un contador que representa el estado del objeto a donar|
 
+![image](https://user-images.githubusercontent.com/20799456/55185037-8665b200-5161-11e9-86e4-55c724b6da93.png)Creación de una nueva donación de productos. Para esto se deben ingresar El nombre , una descripción, una calificación a la calidad (de 1 a 5) y una foto de la donación preferiblemente de 500x500 px.
+________________
+|![browser-visualization (1)](https://user-images.githubusercontent.com/20799456/54962852-70bf7500-4f34-11e9-9c80-8f0787f9bc4c.png)|Visualización del historial de donaciones|
+|--------|--------|
+
+![image](https://user-images.githubusercontent.com/20799456/55184481-3e925b00-5160-11e9-88e4-a00fbd53df66.png)Visualización de las donaciones que los donadores han dado. Por cada producto se puede ver una descripción y un contador que representa el estado del objeto donado. La cantidad de objetos visualizados puede ser modificada.
+____
+|![score](https://user-images.githubusercontent.com/20799456/55185632-cc6f4580-5162-11e9-8ffa-dba2f4d8a5a5.png)|Visualización de puntos|
+|--------|--------|
+
+Visualización de los puntos acumulados por un usuario. Y los disponibles para ganar. ![image](https://user-images.githubusercontent.com/20799456/55185661-db55f800-5162-11e9-8bcd-f36771ff36e3.png)
+
+
+## USUARIO BENEFACTOR
+
+|![video-conference](https://user-images.githubusercontent.com/20799456/55186029-95e5fa80-5163-11e9-9b51-51c39b3a92f8.png)|Creación de solicitudes|
+|--------|--------|
+
+![image](https://user-images.githubusercontent.com/20799456/55186134-d04f9780-5163-11e9-9d24-db6ec1d6efcc.png)
+Un usuario entidad puede abrir solicitudes de donaciones específicas de dinero para realizar ciertos proyectos de beneficio social. Para esto debe ingresar los fondos totales necesarios y la cantidad faltante; una imagen representativa y un mensaje asociado que permita entender mejor la solicitud. 
+________________
+|![browser-visualization (1)](https://user-images.githubusercontent.com/20799456/54962852-70bf7500-4f34-11e9-9c80-8f0787f9bc4c.png)|Visualización y eliminación de las solicitudes hechas por un usuario específico|
+|--------|--------|
+
+![image](https://user-images.githubusercontent.com/20799456/55187053-09890700-5166-11e9-83ea-7c0a8ad88552.png)
+Visualización de las solicitudes de dinero creadas por un usuario. Aquí se puede ver información específica de las solicitudes. Dentro de los campos relevantes encontramos.Los fondos necesarios, la cantidad faltante, una imagen elegida por el creador de la solicitud y una fecha de registro de la misma. 
+
+Borrar las solicitudes de dinero creadas por un usuario especifico. Cada usuario en su respectivo listado de solicitudes podrá elminar cada solicitud creada.
+______
+|![browser-visualization (1)](https://user-images.githubusercontent.com/20799456/54962852-70bf7500-4f34-11e9-9c80-8f0787f9bc4c.png)|Visualización de todas las solicitudes|
+|--------|--------|
+
+![image](https://user-images.githubusercontent.com/20799456/55187591-718c1d00-5167-11e9-95bd-aa9956e80b85.png)
+Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos encontrar las solicitudes de dinero hechas por organizaciones sin animo de lucro. Además de ver información descriptiva de la solicitud, se puede ver las distintas cantidades de dinero donables a cada respectiva causa.
 # UI/MOCKUPS
 # UI/TESTS CARD SORTING
