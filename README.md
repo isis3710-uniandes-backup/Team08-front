@@ -71,4 +71,11 @@ ______
 ![image](https://user-images.githubusercontent.com/20799456/55187591-718c1d00-5167-11e9-95bd-aa9956e80b85.png)
 Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos encontrar las solicitudes de dinero hechas por organizaciones sin animo de lucro. Además de ver información descriptiva de la solicitud, se puede ver las distintas cantidades de dinero donables a cada respectiva causa.
 # UI/MOCKUPS
+
+## Landing page
+
+![2 - Screen 1](https://user-images.githubusercontent.com/20799456/55192646-f7619580-5172-11e9-8e3b-489b01f2fec3.png)
+![3 - Screen 2](https://user-images.githubusercontent.com/20799456/55192647-f7619580-5172-11e9-94ac-880ca3eb27d6.png)
+![1 - Screen 3](https://user-images.githubusercontent.com/20799456/55192648-f7619580-5172-11e9-96dc-64d5481dcc5d.png)
+
 # UI/TESTS CARD SORTING
