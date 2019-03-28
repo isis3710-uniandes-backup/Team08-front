@@ -2,26 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 export default class MiSolicitud extends React.Component {
 
+constructor(props) {
+    super(props);
 
-
-handleSubmit(userId) {
+    this.handleClick = this.handleClick.bind(this);
     
-var userId1 = userId.id;
-  const requestOptions = {
-    method: 'DELETE'
-  };
+  }
 
-  // Note: I'm using arrow functions inside the `.fetch()` method.
-  // This makes it so you don't have to bind component functions like `setState`
-  // to the component.
-  console.log(userId)
-  fetch("/solicitud/" + userId, requestOptions).then((response) => {
-    
-  }).then((result) => {
-    // do what you want with the response here
-  });
-    } 
-handleClick = userId => {
+
+handleClick = event => {
+
+var userId1 = event.target.id;
+  console.log("mira"+ userId1);
+
+  this.props.handleSubmit(userId1);
   
 }
 //onClick= {this.handleClick(x)}
@@ -29,9 +23,11 @@ handleClick = userId => {
 
     render() {
 
+      
+
         return (
 
-            <div className="card cartita">
+            <div className="card cartita" >
     <div className="card-header" id="headingTwo">
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -39,7 +35,7 @@ handleClick = userId => {
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div className="card-body">
        <p>{this.props.solicitud.about}</p>
        <p>Fondos: {this.props.solicitud.fondos}</p>
@@ -48,7 +44,7 @@ handleClick = userId => {
        <p>Registrado: {this.props.solicitud.registered}</p>
 
        
-       <button type="button" onClick = {this.handleSubmit.bind(this.props.solicitud)}  className="btn btn-danger">Borrar</button>
+       <button id={this.props.solicitud.id} type="button" onClick = {this.handleClick}  className="btn btn-danger">Borrar</button>
 
       </div>
     </div>

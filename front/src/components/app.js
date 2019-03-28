@@ -74,12 +74,12 @@ export default class App extends React.Component {
     <div >
     <div id="demo1" className="carousel slide" data-ride="carousel">
   <ul className="carousel-indicators" >
-    <li data-target="#demo1" data-slide-to="0" class="active"></li>
-    <li data-target="#demo1" data-slide-to="1" class=""></li>
-    <li data-target="#demo1" data-slide-to="2" class=""></li>
+    <li data-target="#demo1" data-slide-to="0" className="active"></li>
+    <li data-target="#demo1" data-slide-to="1" className=""></li>
+    <li data-target="#demo1" data-slide-to="2" className=""></li>
   </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
 
       <img className="demo0 img-fluid" src="/images/imagen1.png" alt="Los Angeles" />
       
@@ -196,18 +196,18 @@ export default class App extends React.Component {
               </li>
               <li className="nav-item">
 
-                  <button id ="botoncito" type="button" class="btn btn-primary text-dark" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Crear Solicitud</button>
+                  <button id ="botoncito" type="button" className="btn btn-primary text-dark" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Crear Solicitud</button>
               </li> 
             </ul>
           </div>
         </nav>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nueva Solicitud</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">Nueva Solicitud</h5>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

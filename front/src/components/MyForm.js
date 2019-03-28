@@ -84,7 +84,7 @@ render() {
             <label for="recipient-name" className="col-form-label">ID:</label>
             <input type="text" 
                 value={this.state.id}
-                onChange={this.handleidChange} class="form-control" id="recipient-name"/>
+                onChange={this.handleidChange} className="form-control" id="recipient-name"/>
           </div>
           <div className="form-group">
             <label for="recipient-name" className="col-form-label">Cantidad:</label>
@@ -106,7 +106,7 @@ render() {
                 onChange={this.handleurlChange} className="form-control" id="recipient-name"/>
           </div>
           <div className="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
+            <label for="message-text" className="col-form-label">Message:</label>
             <textarea className="form-control" value={this.state.about}
                 onChange={this.handledescripcionChange} id="message-text"></textarea>
           </div>

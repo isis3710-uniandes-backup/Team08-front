@@ -7,6 +7,8 @@ export default class SoliList extends React.Component {
         "solicitud_list":[]
     }
 
+    
+
     componentDidMount() {
      
         fetch('/solicitud')
