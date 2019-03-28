@@ -42,7 +42,9 @@ ____
 |![score](https://user-images.githubusercontent.com/20799456/55185632-cc6f4580-5162-11e9-8ffa-dba2f4d8a5a5.png)|Visualización de puntos|
 |--------|--------|
 
-Visualización de los puntos acumulados por un usuario. Y los disponibles para ganar. ![image](https://user-images.githubusercontent.com/20799456/55185661-db55f800-5162-11e9-8bcd-f36771ff36e3.png)
+Visualización de los puntos acumulados por un usuario. Y los disponibles para ganar.
+
+![image](https://user-images.githubusercontent.com/20799456/55185661-db55f800-5162-11e9-8bcd-f36771ff36e3.png)
 
 
 ## USUARIO BENEFACTOR
@@ -51,12 +53,14 @@ Visualización de los puntos acumulados por un usuario. Y los disponibles para g
 |--------|--------|
 
 ![image](https://user-images.githubusercontent.com/20799456/55186134-d04f9780-5163-11e9-9d24-db6ec1d6efcc.png)
+
 Un usuario entidad puede abrir solicitudes de donaciones específicas de dinero para realizar ciertos proyectos de beneficio social. Para esto debe ingresar los fondos totales necesarios y la cantidad faltante; una imagen representativa y un mensaje asociado que permita entender mejor la solicitud. 
 ________________
 |![browser-visualization (1)](https://user-images.githubusercontent.com/20799456/54962852-70bf7500-4f34-11e9-9c80-8f0787f9bc4c.png)|Visualización y eliminación de las solicitudes hechas por un usuario específico|
 |--------|--------|
 
 ![image](https://user-images.githubusercontent.com/20799456/55187053-09890700-5166-11e9-83ea-7c0a8ad88552.png)
+
 Visualización de las solicitudes de dinero creadas por un usuario. Aquí se puede ver información específica de las solicitudes. Dentro de los campos relevantes encontramos.Los fondos necesarios, la cantidad faltante, una imagen elegida por el creador de la solicitud y una fecha de registro de la misma. 
 
 Borrar las solicitudes de dinero creadas por un usuario especifico. Cada usuario en su respectivo listado de solicitudes podrá elminar cada solicitud creada.
