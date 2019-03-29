@@ -98,3 +98,9 @@ Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos enco
 ![2 - Screen  8](https://user-images.githubusercontent.com/20799456/55195893-e5382500-517b-11e9-9a8f-fbb28804fefb.png)
 
 # UI/TESTS CARD SORTING
+
+## Cartas creadas
+
+![image](https://user-images.githubusercontent.com/20799456/55232967-17d23400-51f5-11e9-887a-2b512c98c923.png)
+
+## RESULTADOS
