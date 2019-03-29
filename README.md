@@ -109,3 +109,10 @@ Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos enco
 
 La mayoría de personas crearon 4 categorías para agrupar nuestras cartas.
 
+![image](https://user-images.githubusercontent.com/20799456/55233168-b3fc3b00-51f5-11e9-9d4d-ea0bff49e11b.png)
+
+### Agrupaciones óptimas
+
+![image](https://user-images.githubusercontent.com/20799456/55233207-daba7180-51f5-11e9-8167-c368066fbf5c.png)
+
+![image](https://user-images.githubusercontent.com/20799456/55233258-04739880-51f6-11e9-8572-1d441c5d1bbf.png)
