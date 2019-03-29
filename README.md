@@ -109,7 +109,14 @@ Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos enco
 
 La mayoría de personas crearon 4 categorías para agrupar nuestras cartas.
 
+## Matriz de similaridad
+
 ![image](https://user-images.githubusercontent.com/20799456/55233168-b3fc3b00-51f5-11e9-9d4d-ea0bff49e11b.png)
+
+En esta matriz podemos evidenciar:
+- Las distintas opciones de donación en su mayoría fueron agrupadas en la misma categoría.
+- Ver las solicitudes de donación y conocer más sobre ellas fue reconocido como parte de un mismo elemento.
+- Es interesante tanmbien ver que no se encuentra tanta asociación de donar dinero con donar productos(libros, juguetes, etc).
 
 ### Agrupaciones óptimas
 
