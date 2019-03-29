@@ -104,3 +104,8 @@ Visualización de las solicitudes de todo el sistema de Donu. Aquí podemos enco
 ![image](https://user-images.githubusercontent.com/20799456/55232967-17d23400-51f5-11e9-887a-2b512c98c923.png)
 
 ## RESULTADOS
+
+![image](https://user-images.githubusercontent.com/20799456/55233049-549e2b00-51f5-11e9-8678-564192ac08d8.png)
+
+La mayoría de personas crearon 4 categorías para agrupar nuestras cartas.
+
