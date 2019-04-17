@@ -89,7 +89,7 @@ export default class App extends React.Component {
         </div>
         <hr/>
         <div className="text-center">
-          <h3 className="text-left">Algunas donaciones hechas:</h3>
+          <h2 className="text-left">Algunas donaciones hechas:</h2>
           <ListaDonacion max={3}/>
           <button type="button" className="btn btn-dark"><Link to="/donaciones/">Ver más</Link></button>
         </div>
