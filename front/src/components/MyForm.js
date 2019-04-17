@@ -77,44 +77,49 @@ handleurlChange(event) {
 
 render() {
     return (
-        <form className='form__row' method='POST' onSubmit={this.handleSubmit}>
-            <input
-                type="text"
-                placeholder="ID"
+        <div>
+ <div className="modal-body">
+        <form method='POST' onSubmit={this.handleSubmit}>
+        <div className="form-group">
+            <label for="recipient-name" className="col-form-label">ID:</label>
+            <input type="text" 
                 value={this.state.id}
-                onChange={this.handleidChange}
-            />
-            <br/>
-            <input
-                type="text"
-                placeholder="CANTIDAD"
+                onChange={this.handleidChange} className="form-control" id="recipient-name"/>
+          </div>
+          <div className="form-group">
+            <label for="recipient-name" className="col-form-label">Cantidad:</label>
+            <input type="text" 
                 value={this.state.cantidadFaltante}
-                onChange={this.handlecantidadChange}
-            />
-            <br/>
-            <input
-                type="text"
-                placeholder="DESCRIPCIÓN"
-                value={this.state.about}
-                onChange={this.handledescripcionChange}
-            />
-            <br/>
-            <input
-                type="text"
-                placeholder="Fondos"
+                onChange={this.handlecantidadChange} className="form-control" id="recipient-name"/>
+          </div>
+
+          <div className="form-group">
+            <label for="recipient-name" className="col-form-label">Fondos:</label>
+            <input type="text" 
                 value={this.state.fondos}
-                onChange={this.handlefondosChange}
-            />
-            <br/>
-            <input
-                type="text"
-                placeholder="URL de la imagen"
+                onChange={this.handlefondosChange} className="form-control" id="recipient-name"/>
+          </div>
+          <div className="form-group">
+            <label for="recipient-name" className="col-form-label">Imagen:</label>
+            <input type="text" 
                 value={this.state.picture}
-                onChange={this.handleurlChange}
-            />
-            <br/>
-            <button type='submit'>save</button>
+                onChange={this.handleurlChange} className="form-control" id="recipient-name"/>
+          </div>
+          <div className="form-group">
+            <label for="message-text" className="col-form-label">Message:</label>
+            <textarea className="form-control" value={this.state.about}
+                onChange={this.handledescripcionChange} id="message-text"></textarea>
+          </div>
+
+        <button type='submit' className="btn btn-primary">Send message</button>
         </form>
+        </div>
+
+        <div className="modal-footer">
+        
+      </div>
+      </div>
+        
     );
 }
 }
