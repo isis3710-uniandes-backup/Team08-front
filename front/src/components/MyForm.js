@@ -81,29 +81,29 @@ render() {
  <div className="modal-body">
         <form method='POST' onSubmit={this.handleSubmit}>
         <div className="form-group">
-            <label for="recipient-name" className="col-form-label">ID:</label>
+            <label for="recipient-name1" className="col-form-label">ID:</label>
             <input type="text" 
                 value={this.state.id}
-                onChange={this.handleidChange} className="form-control" id="recipient-name"/>
+                onChange={this.handleidChange} className="form-control" id="recipient-name1"/>
           </div>
           <div className="form-group">
-            <label for="recipient-name" className="col-form-label">Cantidad:</label>
+            <label for="recipient-name2" className="col-form-label">Cantidad:</label>
             <input type="text" 
                 value={this.state.cantidadFaltante}
-                onChange={this.handlecantidadChange} className="form-control" id="recipient-name"/>
+                onChange={this.handlecantidadChange} className="form-control" id="recipient-name2"/>
           </div>
 
           <div className="form-group">
-            <label for="recipient-name" className="col-form-label">Fondos:</label>
+            <label for="recipient-name3" className="col-form-label">Fondos:</label>
             <input type="text" 
                 value={this.state.fondos}
-                onChange={this.handlefondosChange} className="form-control" id="recipient-name"/>
+                onChange={this.handlefondosChange} className="form-control" id="recipient-name3"/>
           </div>
           <div className="form-group">
-            <label for="recipient-name" className="col-form-label">Imagen:</label>
+            <label for="recipient-name4" className="col-form-label">Imagen:</label>
             <input type="text" 
                 value={this.state.picture}
-                onChange={this.handleurlChange} className="form-control" id="recipient-name"/>
+                onChange={this.handleurlChange} className="form-control" id="recipient-name4"/>
           </div>
           <div className="form-group">
             <label for="message-text" className="col-form-label">Message:</label>
@@ -111,7 +111,7 @@ render() {
                 onChange={this.handledescripcionChange} id="message-text"></textarea>
           </div>
 
-        <button type='submit' className="btn btn-primary">Send message</button>
+        <button type='submit' className="btn btn-d">Send message</button>
         </form>
         </div>
 

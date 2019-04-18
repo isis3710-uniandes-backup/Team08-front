@@ -28,14 +28,14 @@ var userId1 = event.target.id;
         return (
 
             <div className="card cartita" >
-    <div className="card-header" id="headingTwo">
-      <h5 className="mb-0">
-        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Número de solicitud #{this.props.solicitud.id}
+    <div className="card-header" >
+      <h2 className="mb-0">
+        <button className="btn  collapsed" type="button" data-toggle="collapse" data-target=".collapseTwo" aria-expanded="false" >
+          Número de solicitud {this.props.solicitud.id}
         </button>
-      </h5>
+      </h2>
     </div>
-    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+    <div  className="collapse collapseTwo"  data-parent="#accordionExample">
       <div className="card-body">
        <p>{this.props.solicitud.about}</p>
        <p>Fondos: {this.props.solicitud.fondos}</p>
@@ -44,7 +44,7 @@ var userId1 = event.target.id;
        <p>Registrado: {this.props.solicitud.registered}</p>
 
        
-       <button id={this.props.solicitud.id} type="button" onClick = {this.handleClick}  className="btn btn-danger">Borrar</button>
+       <button id={this.props.solicitud.id} type="button" onClick = {this.handleClick}  className="btn btn-dark">Borrar</button>
 
       </div>
     </div>

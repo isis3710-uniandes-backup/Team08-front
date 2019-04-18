@@ -40,15 +40,16 @@ export default class FormProduct extends React.Component {
 		return (
 			<form onSubmit={this.agregar_donacion}>
 		        <div>
-	               <h4 className="text-left">Datos de la donacion</h4>
+	               <p className="text-left acercah5">Datos de la donacion</p>
 	                <div className="form-row">
-	                    <div className="col-lg-8 col-md-8 col-sm-10 form-group">
-	                      <input id="product_name" type="text" className="form-control" placeholder="Nombre del producto"/>
+	                    <div className="col-lg-8 col-md-8 col-sm-10 form-group nobordeazul">
+	                    	
+	                      <input  id="product_name" type="text" className="form-control" aria-label="nombre" placeholder="Nombre del producto"/>
 	                    </div>
-	                    <div className="col-lg-4 col-md-4 col-sm-2 form-group">
-	                      <select id="quality" className="custom-select">
-	                        <option defaultValue>Calidad</option>
-	                        <option>1</option>
+	                    <div className="col-lg-4 col-md-4 col-sm-2 form-group blanquito">
+	                      <select id="quality" className="dropdown-menu blanquito" aria-label="calidad" className="custom-select form-control">
+	                        <option defaultValue className = "form-control">Calidad</option>
+	                        <option >1</option>
 	                        <option>2</option>
 	                        <option>3</option>
 	                        <option>4</option>
@@ -56,18 +57,19 @@ export default class FormProduct extends React.Component {
 	                      </select>
 	                    </div>
 	                    <div className="col-12 form-group">
-	                      <textarea id="description" type="text" className="form-control" placeholder="Descripción"></textarea>
+
+	                      <textarea id="description" aria-label="descripción" type="text" className="form-control" placeholder="Descripción"></textarea>
 	                    </div>
 	                    <div className="col-12 form-group">
-	                      <input id="url_img" type="text" className="form-control" placeholder="URL de la imagen"/>
-	                      <small id="imageHelp" class="form-text text-muted">Su imagen debe ser de 500px * 500px</small>
+	                      <input id="url_img" aria-label="imagen" type="text" className="form-control" placeholder="URL de la imagen"/>
+	                      <small id="imageHelp" className="form-text text-muted">Su imagen debe ser de 500px * 500px</small>
 	                    </div>
 	                </div> 
 	            </div>
 		        <br/>
 		        <p>{this.state.alert}</p>
 		        <br/>
-		        <input type="submit" className="btn btn-dark" value="Donar"/>
+		        <input aria-label="enviar" type="submit" className="btn btn-dark" value="Donar"/>
 	        </form>
 	    );
 	}

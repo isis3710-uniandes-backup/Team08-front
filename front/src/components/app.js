@@ -16,58 +16,14 @@ export default class App extends React.Component {
   renderAcerca(){
     return (
         <div className="col-12">
-          <h5>Acerca de DONU</h5>
+          <p className="acercah5">Acerca de DONU</p>
           <p>Donu es una plataforma web que pretender facilitar el proceso de donaciones entre las personas y las ONG En esta plataforma pretendemos que tanto los usuario y las ong puedan decir los elementos que pueden donar y los que realmente necesitan.</p>
           <hr/>
         </div>
       );
   }
 
-  renderFooter(){
-    return(
-        <div>
-          <footer className="section footer-clasic context-dark bg-dark">
-            <div className="container">
-              <div className="row row-30">
-            <div className="col-md-4 col-xl-5">
-              <div className="pr-xl-4"><Link to="/" className="brand"><img className="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcSet="images/agency/logo-retina-inverse-280x74.png 2x"/></Link>
-                <p>Somos una sociedad sin ánimo de lucro que pretende facilitar el proceso de donación .</p>
-                <p className="rights"><span>©  </span><span className="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <h5>Contacts</h5>
-              <dl className="contact-list">
-                <dt>Address:</dt>
-                <dd>798 South Park Avenue, Jaipur, Raj</dd>
-              </dl>
-              <dl className="contact-list">
-                <dt>email:</dt>
-                <dd><Link to="/">dkstudioin@gmail.com</Link></dd>
-              </dl>
-              <dl className="contact-list">
-                <dt>phones:</dt>
-                <dd><Link to="/">+91 7568543012</Link> <span>or</span> <Link to="/">+91 9571195353</Link>
-                </dd>
-              </dl>
-            </div>
-            <div className="col-md-4 col-xl-3">
-              <h5>Links</h5>
-              <ul className="nav-list">
-                <li><Link to="/">Facebook</Link></li>
-                <li><Link to="/">Instagram</Link></li>
-                <li><Link to="/">Twitter</Link></li>
-                <li><Link to="/">Google plus</Link></li>
-                <li><Link to="/">Reddit</Link></li>
-              </ul>
-            </div>
-          </div>
-            </div>
-          </footer>
-        </div>
-      );
-  }
-
+  
   
   Inicio=()=>{
     return (
@@ -81,24 +37,26 @@ export default class App extends React.Component {
   <div className="carousel-inner">
     <div className="carousel-item active">
 
-      <img className="demo0 img-fluid" src="/images/imagen1.png" alt="Los Angeles" />
+      <img className="demo0 img-fluid" src="/images/imagen1.png" alt="Foto en primer plano de mujer negra" />
       
       <div className="centered carousel-caption d-none d-md-block">¡Has del mundo un mejor lugar!</div>  
     </div>
     <div class="carousel-item">
-      <img className="demo0 img-fluid" src="/images/imagen3.jpg" alt="Chicago"  />
-      <div className="centered2 carousel-caption d-none d-md-block">Empodera a las nuevas generaciones</div>    
+      <img className="demo0 img-fluid" src="/images/imagen3.jpg" alt="Niño negro estudiando"  />
+      <div className="centered2 carousel-caption d-none d-md-block"><h1>Empodera a las nuevas generaciones</h1></div>    
     </div>
     <div className="carousel-item">
-      <img className="demo0 img-fluid" src="/images/imagen2.jpg" alt="New York"  />
+      <img className="demo0 img-fluid" src="/images/imagen2.jpg" alt="Niños musulmanes corriendo"  />
       <div className="centered3 carousel-caption d-none d-md-block">Aporta al futuro de la humanidad</div>       
     </div>
   </div>
   <a className="carousel-control-prev" href="#demo1" data-slide="prev">
-    <span className="carousel-control-prev-icon"></span>
+    <span className="carousel-control-prev-icon" ></span>
+     <span class="sr-only">Previous</span>
   </a>
   <a className="carousel-control-next" href="#demo1" data-slide="next">
-    <span className="carousel-control-next-icon"></span>
+    <span className="carousel-control-next-icon white "></span>
+    <span class="sr-only">Next</span>
   </a>
 </div>
       <div className="container">
@@ -108,7 +66,7 @@ export default class App extends React.Component {
             <div className="row">
             {this.renderAcerca()}
             <div className="col-12">
-              <h5>¿Estás interesado en donar?</h5>
+              <p className = "acercah5">¿Estás interesado en donar?</p>
               <p>¡Realiza una donación, mira la evidencia de tus buenas acciones y gana puntos con tan sólo un click!</p>
             </div>
           </div>
@@ -121,11 +79,10 @@ export default class App extends React.Component {
         <div className="text-center">
           <h2 className="text-left">Algunas donaciones hechas:</h2>
           <ListaDonacion max={3}/>
-          <button type="button" className="btn btn-dark" text-whi><Link to="/donaciones/">Ver más</Link></button>
+          <button type="button" className="btn btn-dark text-white" ><a  className = "text-white" href="/donaciones/">Ver más</a></button>
         </div>
         <hr/>
         <Points/>
-        {this.renderFooter()}
       </div>
       </div>
       );
@@ -144,7 +101,7 @@ export default class App extends React.Component {
     return (
       <div className="container text-center">
         <hr/>
-        <h2>¡Actualmente estas son sus solicitudes!</h2>
+        <h1>¡Actualmente estas son tus solicitudes!</h1>
         <hr/>
         <MisSolicitudes/>
         <br/>
@@ -156,7 +113,7 @@ export default class App extends React.Component {
     return (
       <div className="container text-center">
         <hr/>
-        <h2>¡No esperes más para ayudar a los demás!</h2>
+        <h1>¡No esperes más para ayudar a los demás!</h1>
         <hr/>
         <Sol_list/>
         <br/>
@@ -169,7 +126,7 @@ export default class App extends React.Component {
     return (
       <Router>
 
-        <nav id="navvv" className="navbar navbar-expand-sm   fixed-top">
+        <nav id="navvv" className="navbar navbar-expand-sm   ">
           <Link to="/" className="navbar-brand"><img src="/images/donu_logo.png" alt="Donu logo" weigth="40px;" height="40px;"/></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

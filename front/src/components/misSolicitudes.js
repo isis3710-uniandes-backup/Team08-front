@@ -65,7 +65,7 @@ render() {
         <div className = "cartita">
         <div className="accordion" id="accordionExample">
   <div className="card">
-    <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div id="collapseOne" className="collapse show"  data-parent="#accordionExample">
       <div className="card-body">
        Es de suma importancia que el usuario entienda que los datos le pertenecen a él, en caso de que desee borrar cualquiera de sus Solicitudes, DONU no persistirá ningún dato que usted haya decidido borrar del sistema. En caso de cualquier reclamo, no dude en comunicarse con cualquiera de nuestros contactos que se encuentran en la parte inferior de la página inicial.
       </div>

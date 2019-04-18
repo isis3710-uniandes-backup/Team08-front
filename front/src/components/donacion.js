@@ -15,9 +15,9 @@ export default class Donacion extends React.Component {
         return (       
         <div className="col-lg-4 col-md-4 col-sm-1">
             <div className="card bg-light">
-                <img src={this.props.donacion.url_img} className="card-img-top" />
+                <img src={this.props.donacion.url_img} className="card-img-top" alt={this.obtenerDescripcion()} />
                 <div className="">
-                    <Link to=""><h4 className="card-title">{this.props.donacion.name}</h4></Link>
+                    <p className="card-titleh4">{this.props.donacion.name}</p>
                     <p className="card-text">{this.obtenerDescripcion()}</p>
                     <p className="card-text">Calidad: {this.props.donacion.quality}</p>
                 </div>

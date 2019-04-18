@@ -6,7 +6,7 @@ export default class VerDonaciones extends React.Component {
 	render(){
 		return (
 			<div className="container">
-				<h2 className="text-left">Todas las donaciones</h2>
+				<h1 className="text-left">Todas las donaciones</h1>
 				<br/>
 				<ListaDonacion max={-1}/>
 			</div>
