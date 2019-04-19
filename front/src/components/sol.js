@@ -151,8 +151,7 @@ console.log("omeee"+y);
     </div>
  
     <div className="bd-example ">
-<button id = {this.props.solicitud.id} type="button" onClick={this.handleSubmit2} className="btn btn-outline-dark lalo">$100</button>
- <button id = {this.props.solicitud.id} type="button" onClick={this.handleSubmit1} className="btn btn-outline-dark lalo">$500</button>
+
  <button id = {this.props.solicitud.id} type="button" onClick={this.handleSubmit} className="btn btn-outline-dark lalo">$1000</button>
 
 

@@ -24,11 +24,15 @@ export default class MisSolicitudes extends React.Component {
               console.log(myJson);
               var count = 0;
               var solicitudes=[];
+              var tam = myJson.length;
               for(var soli of myJson){
-                  if (count>3){
-                      break;
-                  }count++;
-                  solicitudes.push(soli)
+                  if(count> tam/2){
+                 if(soli.picture.length>200)
+                 {
+                  soli.picture = "Url demasiado larga."
+                 }
+                  solicitudes.push(soli)}
+                  count++;
               }
                  this.setState({solicitud_list:solicitudes});
                 

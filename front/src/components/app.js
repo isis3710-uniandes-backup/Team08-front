@@ -34,20 +34,19 @@ export default class App extends React.Component {
     <li data-target="#demo1" data-slide-to="1" className=""></li>
     <li data-target="#demo1" data-slide-to="2" className=""></li>
   </ul>
-  <div className="carousel-inner">
+  <div id="negro" className="carousel-inner">
     <div className="carousel-item active">
 
-      <img className="demo0 img-fluid" src="/images/imagen1.png" alt="Foto en primer plano de mujer negra" />
+      <img className="demo0 img-fluid" src="/images/imagen1.jpg" alt="Foto en primer plano de mujer negra" />
       
-      <div className="centered carousel-caption d-none d-md-block">¡Has del mundo un mejor lugar!</div>  
+        
     </div>
     <div class="carousel-item">
       <img className="demo0 img-fluid" src="/images/imagen3.jpg" alt="Niño negro estudiando"  />
-      <div className="centered2 carousel-caption d-none d-md-block"><h1>Empodera a las nuevas generaciones</h1></div>    
+      <div id="negrooo" className="centered2 carousel-caption d-none d-md-block"><h1 className="text-dark">.</h1></div>    
     </div>
     <div className="carousel-item">
-      <img className="demo0 img-fluid" src="/images/imagen2.jpg" alt="Niños musulmanes corriendo"  />
-      <div className="centered3 carousel-caption d-none d-md-block">Aporta al futuro de la humanidad</div>       
+      <img className="demo0 img-fluid" src="/images/imagen2.jpg" alt="Niños musulmanes corriendo"  />     
     </div>
   </div>
   <a className="carousel-control-prev" href="#demo1" data-slide="prev">
@@ -101,7 +100,7 @@ export default class App extends React.Component {
     return (
       <div className="container text-center">
         <hr/>
-        <h1>¡Actualmente estas son tus solicitudes!</h1>
+        <h1>¡Estas son las solicitudes más cotizadas!</h1>
         <hr/>
         <MisSolicitudes/>
         <br/>

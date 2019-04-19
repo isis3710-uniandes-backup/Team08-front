@@ -111,7 +111,7 @@ render() {
                 onChange={this.handledescripcionChange} id="message-text"></textarea>
           </div>
 
-        <button type='submit' className="btn btn-d">Send message</button>
+        <button type='submit' className="btn btn-dark">Crear</button>
         </form>
         </div>
 

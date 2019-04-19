@@ -7,7 +7,7 @@ export default class Solicitud extends React.Component {
         return (
             
            <div className="carousel-item ">
-      <img className="d-block w-100" src={this.props.solicitud.picture} alt={this.props.solicitud.id}/>
+      <img className="d-block w-100" src={this.props.solicitud.picture} alt={this.props.solicitud.about}/>
     </div>
     
     

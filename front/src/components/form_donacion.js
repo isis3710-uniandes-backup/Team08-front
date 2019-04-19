@@ -47,14 +47,8 @@ export default class FormProduct extends React.Component {
 	                      <input  id="product_name" type="text" className="form-control" aria-label="nombre" placeholder="Nombre del producto"/>
 	                    </div>
 	                    <div className="col-lg-4 col-md-4 col-sm-2 form-group blanquito">
-	                      <select id="quality" className="dropdown-menu blanquito" aria-label="calidad" className="custom-select form-control">
-	                        <option defaultValue className = "form-control">Calidad</option>
-	                        <option >1</option>
-	                        <option>2</option>
-	                        <option>3</option>
-	                        <option>4</option>
-	                        <option>5</option>
-	                      </select>
+	                      
+	                      <input id ="quality"  aria-label="calidad" className=" form-control" type="number" name="quantity" min="1" max="5" placeholder="Calidad"></input>
 	                    </div>
 	                    <div className="col-12 form-group">
 

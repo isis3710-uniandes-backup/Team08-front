@@ -19,9 +19,7 @@ export default class SolicitudList extends React.Component {
               var count = 0;
               var solicitudes=[];
               for(var soli of myJson){
-                  if (count>5){
-                      break;
-                  }count++;
+                  
                   solicitudes.push(soli)
               }
                  this.setState({solicitud_list:solicitudes});
@@ -44,7 +42,7 @@ export default class SolicitudList extends React.Component {
  <h2 >Solicitudes en proceso</h2>
   <div className="carousel-inner">
   <div className="carousel-item active ">
-      <img className="d-block w-100" src= "https://www.internews.org/sites/default/files/styles/article_header/public/2017-12/passing%20supplies%20on%20boat.jpg?itok=wQIaeNzw"alt="0"/>
+      <img className="d-block w-100" src= "https://www.internews.org/sites/default/files/styles/article_header/public/2017-12/passing%20supplies%20on%20boat.jpg?itok=wQIaeNzw"alt="imagen"/>
     </div>
     {this.renderSolicitudes()}
     </div>
