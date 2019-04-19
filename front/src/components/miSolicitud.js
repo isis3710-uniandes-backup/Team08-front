@@ -31,7 +31,7 @@ var userId1 = event.target.id;
     <div className="card-header" >
       <h2 className="mb-0">
         <button className="btn  collapsed" type="button" data-toggle="collapse" data-target=".collapseTwo" aria-expanded="false" >
-          Número de solicitud {this.props.solicitud.id}
+          <strong>Número de solicitud {this.props.solicitud.id}</strong>
         </button>
       </h2>
     </div>

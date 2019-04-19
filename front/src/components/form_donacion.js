@@ -44,18 +44,19 @@ export default class FormProduct extends React.Component {
 	                <div className="form-row">
 	                    <div className="col-lg-8 col-md-8 col-sm-10 form-group nobordeazul">
 	                    	
-	                      <input  id="product_name" type="text" className="form-control" aria-label="nombre" placeholder="Nombre del producto"/>
+	                      <input  id="product_name" type="text" className="form-control " aria-label="nombre" placeholder="Nombre del producto" required/>
+	                       
 	                    </div>
 	                    <div className="col-lg-4 col-md-4 col-sm-2 form-group blanquito">
 	                      
-	                      <input id ="quality"  aria-label="calidad" className=" form-control" type="number" name="quantity" min="1" max="5" placeholder="Calidad"></input>
+	                      <input id ="quality"  aria-label="calidad" className=" form-control" type="number" name="quantity" min="1" max="5" placeholder="Calidad" required/>
 	                    </div>
 	                    <div className="col-12 form-group">
 
-	                      <textarea id="description" aria-label="descripción" type="text" className="form-control" placeholder="Descripción"></textarea>
+	                      <textarea id="description" aria-label="descripción" type="text" className="form-control" placeholder="Descripción" required></textarea>
 	                    </div>
 	                    <div className="col-12 form-group">
-	                      <input id="url_img" aria-label="imagen" type="text" className="form-control" placeholder="URL de la imagen"/>
+	                      <input id="url_img" aria-label="imagen" type="text" className="form-control" placeholder="URL de la imagen" required/>
 	                      <small id="imageHelp" className="form-text text-muted">Su imagen debe ser de 500px * 500px</small>
 	                    </div>
 	                </div> 

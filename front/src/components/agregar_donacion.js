@@ -72,7 +72,7 @@ export default class AgregarDonacion extends React.Component {
         return (
       <div className="container text-center">
         <hr/>
-        <h1>Gracias por tu contribución</h1>
+        <h1>Gracias por ayuda a crecer Donu </h1>
         <hr/>
         <Router>
           

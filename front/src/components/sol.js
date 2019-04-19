@@ -45,7 +45,8 @@ console.log("omeee"+y);
             .then(data => console.log(data))
             .catch(error => console.log(error));
 
-             });
+             }).then(function(response){ window.location.href="/agregar_donacion/hecho";});
+             
     } 
 
     handleSubmit1(event) {

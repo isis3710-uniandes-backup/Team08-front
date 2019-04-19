@@ -55,8 +55,11 @@ console.log(userId1+"ppp");
   fetch("/solicitud/" + userId1, requestOptions).then((response) => {
     
   }).then((result) => {
+    
+    window.location.href="/misSolicitudes";
+
     // do what you want with the response here
-  });
+  }).then((result)=>{alert("Has borrado la solicitud "+ userId1);});
     } 
 
     renderSolicitudes() {
