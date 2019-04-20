@@ -1,5 +1,5 @@
 import React from 'react';
-import Solicitud from './sol.js'
+import Solicitud from './sol.js';
 
 export default class SoliList extends React.Component {
 

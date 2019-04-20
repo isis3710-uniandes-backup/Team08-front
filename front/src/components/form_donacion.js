@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 
 export default class FormProduct extends React.Component {
 	state ={
@@ -28,7 +29,6 @@ export default class FormProduct extends React.Component {
 		    })
 	    }
 	    else{
-	    	console.log('hola');
 	    	event.preventDefault();
 	    	this.setState({alert:'Debes llenar todos los campos'});
 
@@ -40,31 +40,47 @@ export default class FormProduct extends React.Component {
 		return (
 			<form onSubmit={this.agregar_donacion}>
 		        <div>
-	               <p className="text-left acercah5">Datos de la donacion</p>
+	               <p className="text-left acercah5"><FormattedMessage id="donate_title"/></p>
 	                <div className="form-row">
 	                    <div className="col-lg-8 col-md-8 col-sm-10 form-group nobordeazul">
-	                    	
-	                      <input  id="product_name" type="text" className="form-control " aria-label="nombre" placeholder="Nombre del producto" required/>
-	                       
+		                    <FormattedMessage id="donate_form_name">
+		                    {placeholder=>
+		                      <input  id="product_name" type="text" className="form-control " aria-label="nombre" placeholder={placeholder} required/>
+		                    }
+		                    </FormattedMessage>
 	                    </div>
 	                    <div className="col-lg-4 col-md-4 col-sm-2 form-group blanquito">
-	                      
-	                      <input id ="quality"  aria-label="calidad" className=" form-control" type="number" name="quantity" min="1" max="5" placeholder="Calidad" required/>
+		                    <FormattedMessage id="donate_form_quality">
+			                {placeholder=>
+		                      <input id ="quality"  aria-label="calidad" className=" form-control" type="number" name="quantity" min="1" max="5" placeholder={placeholder} required/>
+		                    }
+			                </FormattedMessage>
 	                    </div>
 	                    <div className="col-12 form-group">
-
-	                      <textarea id="description" aria-label="descripción" type="text" className="form-control" placeholder="Descripción" required></textarea>
+	                    	<FormattedMessage id="donate_form_description">
+		                    {placeholder=>
+	                      		<textarea id="description" aria-label="descripción" type="text" className="form-control" placeholder={placeholder} required></textarea>
+	                    	}
+		                	</FormattedMessage>
 	                    </div>
 	                    <div className="col-12 form-group">
-	                      <input id="url_img" aria-label="imagen" type="text" className="form-control" placeholder="URL de la imagen" required/>
-	                      <small id="imageHelp" className="form-text text-muted">Su imagen debe ser de 500px * 500px</small>
+	                    	<FormattedMessage id="donate_form_url_image">
+		                    {placeholder=>
+	                      		<input id="url_img" aria-label="imagen" type="text" className="form-control" placeholder={placeholder} required/>
+	                      	}
+		                    </FormattedMessage>
+	                      <small id="imageHelp" className="form-text text-muted"><FormattedMessage id="donate_form_advise"/></small>
 	                    </div>
 	                </div> 
 	            </div>
 		        <br/>
 		        <p>{this.state.alert}</p>
 		        <br/>
-		        <input aria-label="enviar" type="submit" className="btn btn-dark" value="Donar"/>
+		        <FormattedMessage id="donate_button">
+		        {placeholder=>
+		        	<input aria-label="enviar" type="submit" className="btn btn-dark" value={placeholder} />
+		        }
+		        </FormattedMessage>
 	        </form>
 	    );
 	}

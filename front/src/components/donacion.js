@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {FormattedMessage} from 'react-intl';
 export default class Donacion extends React.Component {
     
     obtenerDescripcion(){
@@ -19,7 +20,7 @@ export default class Donacion extends React.Component {
                 <div className="">
                     <p className="card-titleh4">{this.props.donacion.name}</p>
                     <p className="card-text">{this.obtenerDescripcion()}</p>
-                    <p className="card-text">Calidad: {this.props.donacion.quality}</p>
+                    <p className="card-text"><FormattedMessage id="donation_quality"/>: {this.props.donacion.quality}</p>
                 </div>
             </div>
             <br/>

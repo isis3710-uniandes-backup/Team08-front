@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {FormattedMessage} from 'react-intl';
 export default class sol extends React.Component {
 
 state = {
@@ -135,35 +135,21 @@ console.log("omeee"+y);
 //<button type="button" onChange={this.handleSubmit2(this.props.solicitud.id,this.props.solicitud.cantidadFaltante,this.props.solicitud.picture, this.props.solicitud.about, this.props.solicitud.fondos)} className="btn btn-outline-dark lalo">$1000</button>
 
     render() {
-
-      
         return (
-            
-           
-
-    <div className = "col-4">
-  <div className="card  mb-4 box-shadow">
-   <img className="card-img-top" src={this.props.solicitud.picture} alt="Card image cap"/>
-    <div className="card-body">
-      <p  className="card-title acercah5">Solicitud #{this.props.solicitud.id}</p>
-      <p className="card-text">{this.props.solicitud.about}</p>
-      <p className="card-text">Fondos Necesario: {this.props.solicitud.fondos}</p>
-      <p className="card-text">Fondos Alcanzados : ${this.props.solicitud.cantidadFaltante}</p>
-    </div>
- 
-    <div className="bd-example ">
-
- <button id = {this.props.solicitud.id} type="button" onClick={this.handleSubmit} className="btn btn-outline-dark lalo">$1000</button>
-
-
-
-</div>
-  </div>
-  
-  </div>
-    
-    
-           
+          <div className = "col-4">
+            <div className="card  mb-4 box-shadow">
+             <img className="card-img-top" src={this.props.solicitud.picture} alt="Card image cap"/>
+              <div className="card-body">
+                <p  className="card-title acercah5"><FormattedMessage id="soli_number"/>{this.props.solicitud.id}</p>
+                <p className="card-text">{this.props.solicitud.about}</p>
+                <p className="card-text"><FormattedMessage id="soli_fund"/>: {this.props.solicitud.fondos}</p>
+                <p className="card-text"><FormattedMessage id="soli_quantity"/>: ${this.props.solicitud.cantidadFaltante}</p>
+              </div>
+              <div className="bd-example ">
+                <button id = {this.props.solicitud.id} type="button" onClick={this.handleSubmit} className="btn btn-outline-dark lalo">$1000</button>
+              </div>
+            </div>
+          </div>       
         );
     }
 }

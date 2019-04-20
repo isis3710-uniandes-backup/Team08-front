@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import MiSolicitud from './miSolicitud.js';
+import {FormattedMessage} from 'react-intl';
 export default class MisSolicitudes extends React.Component {
 
   constructor(props){
@@ -59,7 +60,13 @@ console.log(userId1+"ppp");
     window.location.href="/misSolicitudes";
 
     // do what you want with the response here
-  }).then((result)=>{alert("Has borrado la solicitud "+ userId1);});
+  }).then((result)=>{
+      var msg = "Has borrado la solicitud ";
+      if(navigator.language == 'en'){
+        msg = "You have deleted the request "
+      }
+      alert(msg+ userId1);
+    });
     } 
 
     renderSolicitudes() {
@@ -70,19 +77,17 @@ console.log(userId1+"ppp");
 render() {
     return (
         <div className = "cartita">
-        <div className="accordion" id="accordionExample">
-  <div className="card">
-    <div id="collapseOne" className="collapse show"  data-parent="#accordionExample">
-      <div className="card-body">
-       Es de suma importancia que el usuario entienda que los datos le pertenecen a él, en caso de que desee borrar cualquiera de sus Solicitudes, DONU no persistirá ningún dato que usted haya decidido borrar del sistema. En caso de cualquier reclamo, no dude en comunicarse con cualquiera de nuestros contactos que se encuentran en la parte inferior de la página inicial.
-      </div>
-    </div>
-  </div>
-  
-  
-  </div>
-  {this.renderSolicitudes()}
-</div>
+          <div className="accordion" id="accordionExample">
+            <div className="card">
+              <div id="collapseOne" className="collapse show"  data-parent="#accordionExample">
+                <div className="card-body">
+                  <FormattedMessage id="my_requests_advise"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          {this.renderSolicitudes()}
+        </div>
         
     );
 }

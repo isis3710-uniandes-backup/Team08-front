@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {FormattedMessage} from 'react-intl';
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -95,37 +96,37 @@ render() {
  <div className="modal-body">
         <form method='POST' onSubmit={this.handleSubmit}>
         <div className="form-group">
-            <label for="recipient-name1" className="col-form-label">ID:</label>
+            <label for="recipient-name1" className="col-form-label"><FormattedMessage id="my_form_id"/>:</label>
             <input type="text" 
                 value={this.state.id}
                 onChange={this.handleidChange} className="form-control" id="recipient-name1" required/>
           </div>
           <div className="form-group">
-            <label for="recipient-name2" className="col-form-label">Cantidad:</label>
+            <label for="recipient-name2" className="col-form-label"><FormattedMessage id="my_form_quantity"/>:</label>
             <input type="text" 
                 value={this.state.cantidadFaltante}
                 onChange={this.handlecantidadChange} className="form-control" id="recipient-name2" required/>
           </div>
 
           <div className="form-group">
-            <label for="recipient-name3" className="col-form-label">Fondos:</label>
+            <label for="recipient-name3" className="col-form-label"><FormattedMessage id="my_form_funds"/>:</label>
             <input type="text" 
                 value={this.state.fondos}
                 onChange={this.handlefondosChange} className="form-control" id="recipient-name3" required/>
           </div>
           <div className="form-group">
-            <label for="recipient-name4" className="col-form-label">Imagen:</label>
+            <label for="recipient-name4" className="col-form-label"><FormattedMessage id="my_form_url_image"/>:</label>
             <input type="text" 
                 value={this.state.picture}
                 onChange={this.handleurlChange} className="form-control" id="recipient-name4" required/>
           </div>
           <div className="form-group">
-            <label for="message-text" className="col-form-label">Message:</label>
+            <label for="message-text" className="col-form-label"><FormattedMessage id="my_form_message"/>:</label>
             <textarea className="form-control" value={this.state.about}
                 onChange={this.handledescripcionChange} id="message-text" required></textarea>
           </div>
 
-        <button type='submit' className="btn btn-dark">Crear</button>
+        <button type='submit' className="btn btn-dark"><FormattedMessage id="my_form_button"/></button>
         </form>
         </div>
 
