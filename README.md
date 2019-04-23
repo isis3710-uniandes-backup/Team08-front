@@ -6,7 +6,8 @@
 # VIDEO FUNCIONAMIENTO 
 
 https://www.youtube.com/watch?v=bWiXMrlHYp8&feature=youtu.be
-
+# VIDEO FUNCIONAMIENTO INTERNACIONALIZACIÓN
+https://youtu.be/Gg8oqWaeiPU
 # INSTALACIÓN
 
 ### 1. Descarga
