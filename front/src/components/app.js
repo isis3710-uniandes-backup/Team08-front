@@ -14,6 +14,7 @@ import esLocaleData from 'react-intl/locale-data/es';
 import enLocaleData from 'react-intl/locale-data/en';
 import localeEsMessages from "../locales/es";
 import localeEnMessages from "../locales/en";
+import loggear from "./app1";
 
 addLocaleData([...enLocaleData,...esLocaleData]);
 let i18nConfig = {
