@@ -4,9 +4,7 @@ import App from "./components/app";
 import { makeMainRoutes } from './components/routes';
 
 
-ReactDOM.render(
-	<App/>, document.getElementById("root")
-	);
+
 const routes = makeMainRoutes();
 
 ReactDOM.render(

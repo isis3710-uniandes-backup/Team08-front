@@ -15,16 +15,13 @@ import enLocaleData from 'react-intl/locale-data/en';
 import localeEsMessages from "../locales/es";
 import localeEnMessages from "../locales/en";
 import App1 from "./app1";
-
 addLocaleData([...enLocaleData,...esLocaleData]);
 let i18nConfig = {
       locale: 'en',
       messages: localeEnMessages
   };
-export default class App extends React.Component {
-  
-
-  componentDidMount(){
+export default class Home extends React.Component {
+ componentDidMount(){
     var lang = navigator.language
     console.log(lang);
     switch (lang) {
@@ -219,3 +216,4 @@ export default class App extends React.Component {
     );
   }
 }
+
