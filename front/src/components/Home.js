@@ -14,7 +14,8 @@ import esLocaleData from 'react-intl/locale-data/es';
 import enLocaleData from 'react-intl/locale-data/en';
 import localeEsMessages from "../locales/es";
 import localeEnMessages from "../locales/en";
-import App1 from "./app1";
+
+
 addLocaleData([...enLocaleData,...esLocaleData]);
 let i18nConfig = {
       locale: 'en',
@@ -48,46 +49,7 @@ export default class Home extends React.Component {
   Inicio=()=>{
     return (
       <div>
-        <div id="demo1" className="carousel slide" data-ride="carousel">
-          <ul className="carousel-indicators" >
-            <li data-target="#demo1" data-slide-to="0" className="active"></li>
-            <li data-target="#demo1" data-slide-to="1" className=""></li>
-            <li data-target="#demo1" data-slide-to="2" className=""></li>
-          </ul>
-          <div id="negro" className="carousel-inner">
-            <div className="carousel-item active">
-            <FormattedMessage id="image1">
-            {src=>
-              <img className="demo0 img-fluid" src={src} alt={src}/>
-            }
-            </FormattedMessage>
-                
-            </div>
-            <div class="carousel-item">
-              <FormattedMessage id="image2">
-              {src=>
-                <img className="demo0 img-fluid" src={src} alt={src}/>
-              }
-              </FormattedMessage>
-              <div id="negrooo" className="centered2 carousel-caption d-none d-md-block"><h1 className="text-dark">.</h1></div>    
-            </div>
-            <div className="carousel-item">
-              <FormattedMessage id="image3">
-              {src=>
-                <img className="demo0 img-fluid" src={src} alt={src}/>
-              }
-              </FormattedMessage>  
-            </div>
-          </div>
-          <a className="carousel-control-prev" href="#demo1" data-slide="prev">
-            <span className="carousel-control-prev-icon" ></span>
-             <span class="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#demo1" data-slide="next">
-            <span className="carousel-control-next-icon white "></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+       
         <div className="container">
           <hr/>
           <div className="row">
@@ -157,60 +119,14 @@ export default class Home extends React.Component {
       <IntlProvider key={i18nConfig.locale} locale={i18nConfig.locale} messages={i18nConfig.messages}>
         <Router>
 
-         
-
-          <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog" role="document">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel"><FormattedMessage id="my_form_title"/></h5>
-                  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                 <MyForm/>
-              </div>
-            </div>
-          </div>  
+        
           <Route path="/" exact component={this.Inicio} />
           <Route path="/agregar_donacion/" component={this.Donar} />
           <Route path="/donaciones/" component={this.Donaciones} />
           <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
           <Route path= "/soli" component= {this.soli}/>
-          <br />
-          <footer className="section footer-clasic context-dark bg-dark">
-            <div className="container">
-              <div className="row row-30">
-            <div className="col-md-4 col-xl-5">
-              <div className="pr-xl-4">
-                <p className = "text-white"><FormattedMessage id="footer_description"/></p>
-                
-              </div>
-            </div>
-            <div className="col-md-4">
-              <dl className="contact-list">
-                <dt><FormattedMessage id="footer_address"/>:</dt>
-                <dd className = "text-white">798 South Park Avenue, Jaipur, Raj</dd>
-              </dl>
-              <dl className="contact-list">
-                <dt><FormattedMessage id="footer_email"/>:</dt>
-                <dd><Link className = "text-white" to="/">dkstudioin@gmail.com</Link></dd>
-              </dl>
-              
-            </div>
-            <div className="col-md-4 col-xl-3">
-              
-              <ul className="nav-list text-white" >
-                <li ><Link className = "text-white" to="/">Facebook</Link></li>
-                <li><Link className= "text-white" to="/">Instagram</Link></li>
-                <li><Link className = "text-white" to="/">Twitter</Link></li>
-                <li><Link className = "text-white" to="/">Google plus</Link></li>
-               
-              </ul>
-            </div>
-          </div>
-            </div>
-          </footer>
+         
+  
         </Router>
       </IntlProvider>
     );
