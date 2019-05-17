@@ -10,6 +10,7 @@
 
   <!-- Bootstrap CSS: -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 
   <title>Donu</title>
 </head>
@@ -21,11 +22,43 @@
   
 
   <div id = "root1"></div>
-  <div id="root" role = "main"></div>
+
 
   
-  
-
+   <br >
+        <footer class="section footer-clasic context-dark bg-dark">
+            <div class="container">
+              <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4">
+                <p class = "text-white"><FormattedMessage id="footer_description"/></p>
+                
+              </div>
+            </div>
+            <div class="col-md-4">
+              <dl class="contact-list">
+                <dt><FormattedMessage id="footer_address"/></dt>
+                <dd class = "text-white">798 South Park Avenue, Jaipur, Raj</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt><FormattedMessage id="footer_email"/></dt>
+                <dd><Link class = "text-white" to="/">dkstudioin@gmail.com</Link></dd>
+              </dl>
+              
+            </div>
+            <div class="col-md-4 col-xl-3">
+              
+              <ul class="nav-list text-white" >
+                <li ><Link class = "text-white" to="/">Facebook</Link></li>
+                <li><Link class= "text-white" to="/">Instagram</Link></li>
+                <li><Link class = "text-white" to="/">Twitter</Link></li>
+                <li><Link class = "text-white" to="/">Google plus</Link></li>
+               
+              </ul>
+            </div>
+          </div>
+            </div>
+          </footer>
 
   <!-- Bootstrap JS: -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -67,11 +100,13 @@ margin-bottom: 1%;
     margin-left: 28%;
   }
 
-  #botoncito{
+  #botoncito, #qsLogoutBtn{
     border-color:transparent;
     background-color: transparent;
+    font-family: sans-serif;
 
   }
+
 
 
   .cartita{
@@ -266,6 +301,12 @@ select option {
 .bullet .measure.s1 { fill: steelblue; }
 .bullet .title { font-size: 14px; font-weight: bold; }
 .bullet .subtitle { fill: #999; }
+
+#blancoImagen{
+
+  height: 5px;
+  width: 3px;
+}
 
 
 

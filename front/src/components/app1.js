@@ -8,6 +8,7 @@ import {IntlProvider,FormattedMessage,addLocaleData} from "react-intl";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import App from "./app"
 
+
 addLocaleData([...enLocaleData,...esLocaleData]);
 let i18nConfig = {
       locale: 'en',
@@ -30,17 +31,20 @@ export default class App1 extends  React.Component {
     this.props.auth.logout();
   }
   refrescar(){
-    window.location.reload();
+    
   }
 
 
   componentDidMount() {
     const { renewSession } = this.props.auth;
 
-    if (localStorage.getItem('isLoggedIn') === 'true') {
+    if (localStorage.getItem('isLoggedIn') === 'true') 
       renewSession();
+
+
        var lang = navigator.language
     console.log(lang);
+
     switch (lang) {
               case 'es-ES': i18nConfig.messages = localeEsMessages; break;
               case 'EN': i18nConfig.messages = localeEnMessages; break;
@@ -48,15 +52,19 @@ export default class App1 extends  React.Component {
           }
     this.setState({ locale: lang });
     i18nConfig.locale = lang;
-    } 
+    
   }
+  cargar (){
+     window.location.replace("https://www.w3schools.com");}
 
-  render() {
-    const { isAuthenticated } = this.props.auth;
+
+    
+    componentWillMount(){
     console.log((localStorage.getItem('isLoggedIn') === 'true')+"está en true")
     console.log((localStorage.getItem('isLoggedIn') === 'false')+"está en false")
-    if(!localStorage.getItem('isLoggedIn')){
+    if(localStorage.getItem('isLoggedIn') == null ){
       console.log("No autenticado");
+      alert("está loggeado: "+localStorage.getItem('isLoggedIn')+" este es el localStorage "+localStorage.getItem('isLoggedIn'));
       document.cookie = 1;
       this.login();
 
@@ -75,6 +83,11 @@ export default class App1 extends  React.Component {
         localStorage.setItem('token',myJson.token);
       })
     }
+
+  }
+
+  render() {
+    const { isAuthenticated } = this.props.auth;
 
     return (
      
@@ -113,11 +126,15 @@ export default class App1 extends  React.Component {
                  <Button
                     id="qsLogoutBtn"
                     bsStyle="primary"
-                    className="btn-margin"
+                    className="btn btn-primary text-dark"
                     onClick={this.logout.bind(this)}
                   >
-                    Log Out
+                   <a> Log out</a>
                   </Button>
+                </li>
+                <li>
+                <img id = "blancoImagen" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAQlBMVEX///+Hh4d4eHhqampcXFxRUVFUVFQqKipaWlqMjIyDg4NxcXF7e3tjY2OIiIh3d3dISEgICAhDQ0M/Pz82NjYwMDB94flrAAABkklEQVR4nO3dTU4DMRAF4fb8ZjIJgQD3vypZsEBsiJBarRrX5wu8Wlqy5HhbPz/e7/d5npfpYfy2Dz9d2r+dhz/t4xOu0xNO82/LGksc2xZT9YRkrYPCa/WEZC3G6gnJLOSzkM9CPgv5LOTroXCvnpCsxVA9IZmFfBbyWchnIZ+FfBbyWchnIZ+FfBbyWchnIZ+FfBbyWcjXQ+GlekKyFi/VE5K1xzk2C/ks5LOQz0I+C/ks5LOQz0I+C/ks5LOQz0I+C/ks5LOQz0I+C/ks5Ouh8Fw9IVkPL4aO/+rLQjoL+Szks5DPQj4L+Szks5DPQj4L+Szks5DPQj4L+Szks5DPQj4L+Szka3GrnpCsh39mLKSzkM9CPgv5LOSzkM9CPgv5LOSzkM9CPgv5LOSzkM9CPgv5LOSzkK/FVD0hmYV8FvJZyGchn4V8FvJZyGchn4V8FvJZyGchn4V8FvJZyGchn4V8PRSeqicka7FUT0jWYq6ekMxCPgv5LOSzkM9CPgv5LOTrofDoN+At1q0d2fb6BZbwB4JOz76RAAAAAElFTkSuQmCC" 
+                onload="{this.cargar}"/>
                 </li>
               </ul>
             </div>
