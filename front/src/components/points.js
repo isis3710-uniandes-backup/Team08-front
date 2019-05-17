@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {FormattedMessage} from 'react-intl';
@@ -9,7 +10,13 @@ export default class points extends React.Component {
     }
 
 componentDidMount() {
-        fetch('/benefit/5c7b3dd2006bf3210b17262f')
+        fetch('/benefit/5c7b3dd2006bf3210b17262f',{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':'Bearer '+localStorage.getItem('token')
+            }
+        })
             .then(function(response) {              
                 return response.json();
             })

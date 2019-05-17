@@ -16,7 +16,14 @@ export default class MisSolicitudes extends React.Component {
 
     componentDidMount() {
      
-        fetch('/solicitud')
+        fetch('/solicitud',{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':'Bearer '+localStorage.getItem('token')
+            }
+        })
+        .catch(error=>console.log(error))
              .then(function(response) {
                 
                  return response.json();
@@ -49,11 +56,13 @@ console.log(userId1+"ppp");
     method: 'DELETE'
   };
 
-  // Note: I'm using arrow functions inside the `.fetch()` method.
-  // This makes it so you don't have to bind component functions like `setState`
-  // to the component.
-
-  fetch("/solicitud/" + userId1, requestOptions).then((response) => {
+  fetch("/solicitud/" + userId1,{
+            method:'DELETE',
+            headers:{
+                'Authorization':localStorage.getItem('token')
+            }
+        })
+        .catch(error=>console.log(error)).then((response) => {
     
   }).then((result) => {
     

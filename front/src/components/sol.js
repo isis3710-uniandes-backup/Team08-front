@@ -14,7 +14,13 @@ handleSubmit(event) {
 
     //var canNueva = cantidadActual+1000;
 var userId1 = event.target.id;
-   fetch('/solicitud/'+userId1)
+   fetch('/solicitud/'+userId1,{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':'Bearer '+localStorage.getItem('token')
+            }
+        })
              .then(function(response) {
                 
                  return response.json();

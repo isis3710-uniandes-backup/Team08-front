@@ -11,7 +11,13 @@ export default class SoliList extends React.Component {
 
     componentDidMount() {
      
-        fetch('/solicitud')
+        fetch('/solicitud',{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':'Bearer '+localStorage.getItem('token')
+            }
+        })
              .then(function(response) {
                 
                  return response.json();

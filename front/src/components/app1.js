@@ -53,15 +53,28 @@ export default class App1 extends  React.Component {
 
   render() {
     const { isAuthenticated } = this.props.auth;
-console.log((localStorage.getItem('isLoggedIn') === 'true')+"está en true")
-console.log((localStorage.getItem('isLoggedIn') === 'false')+"está en false")
+    console.log((localStorage.getItem('isLoggedIn') === 'true')+"está en true")
+    console.log((localStorage.getItem('isLoggedIn') === 'false')+"está en false")
     if(!localStorage.getItem('isLoggedIn')){
       console.log("No autenticado");
       document.cookie = 1;
       this.login();
 
     }
-
+    if(localStorage.getItem('token') == null){
+      fetch('/login',{
+        method:'POST',
+        body:JSON.stringify({username:'admin',password:'password'}),
+        headers:{
+          'Content-Type':'application/json'
+        }
+      })
+      .then(res=>res.json())
+      .catch(error => console.error(error))
+      .then(myJson=>{
+        localStorage.setItem('token',myJson.token);
+      })
+    }
 
     return (
      

@@ -19,7 +19,8 @@ export default class FormProduct extends React.Component {
 		      method:'POST',
 		      body:JSON.stringify(donacion),
 		      headers:{
-		        'Content-Type': 'application/json'
+		        'Content-Type': 'application/json',
+		        'Authorization':'Bearer '+localStorage.getItem('token')
 		      }
 		      })
 		      .then(res2 =>res2.json())
