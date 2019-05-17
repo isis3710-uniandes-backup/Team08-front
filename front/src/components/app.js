@@ -180,40 +180,8 @@ export default class App extends React.Component {
           <Route path="/donaciones/" component={this.Donaciones} />
           <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
           <Route path= "/soli" component= {this.soli}/>
-          <br />
-          <footer className="section footer-clasic context-dark bg-dark">
-            <div className="container">
-              <div className="row row-30">
-            <div className="col-md-4 col-xl-5">
-              <div className="pr-xl-4">
-                <p className = "text-white"><FormattedMessage id="footer_description"/></p>
-                
-              </div>
-            </div>
-            <div className="col-md-4">
-              <dl className="contact-list">
-                <dt><FormattedMessage id="footer_address"/>:</dt>
-                <dd className = "text-white">798 South Park Avenue, Jaipur, Raj</dd>
-              </dl>
-              <dl className="contact-list">
-                <dt><FormattedMessage id="footer_email"/>:</dt>
-                <dd><Link className = "text-white" to="/">dkstudioin@gmail.com</Link></dd>
-              </dl>
-              
-            </div>
-            <div className="col-md-4 col-xl-3">
-              
-              <ul className="nav-list text-white" >
-                <li ><Link className = "text-white" to="/">Facebook</Link></li>
-                <li><Link className= "text-white" to="/">Instagram</Link></li>
-                <li><Link className = "text-white" to="/">Twitter</Link></li>
-                <li><Link className = "text-white" to="/">Google plus</Link></li>
-               
-              </ul>
-            </div>
-          </div>
-            </div>
-          </footer>
+         
+  
         </Router>
       </IntlProvider>
     );
