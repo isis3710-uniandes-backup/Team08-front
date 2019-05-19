@@ -10,7 +10,7 @@ import LiquidFillGauge from 'react-liquid-gauge';
 export default class points extends React.Component {
 
   state = {
-        value: 25, value1:75
+        value: 0, value1:0
     };
     startColor = '#6495ed'; // cornflowerblue
     endColor = '#dc143c'; // crimson
@@ -22,25 +22,25 @@ export default class points extends React.Component {
     }
 
 componentDidMount() {
-       // fetch('https://donu-back.herokuapp.com/benefit/5c7b3dd2006bf3210b17262f',{
-         //   method:'GET',
-         //   headers:{
-          //      'Content-Type':'application/json',
-          //      'Authorization':'Bearer '+localStorage.getItem('token')
-         //   }
-      //  })
-         //   .then(function(response) {              
-          //      return response.json();
-         //   })
-         //   .then(myJson => {
+       fetch('https://donu-back.herokuapp.com/benefit/5c7b3dd2006bf3210b17262f',{
+          method:'GET',
+          headers:{
+               'Content-Type':'application/json',
+              'Authorization':'Bearer '+localStorage.getItem('token')
+         }
+        })
+           .then(function(response) {              
+              return response.json();
+           })
+           .then(myJson => {
 
-           //     var value2 = myJson.pointsValue;
-            //    var value3 = myJson.stock;
+               var value2 = myJson.pointsValue;
+               var value3 = myJson.stock;
                 
-            //    this.setState({value:value2, value1: value3});               
-            //    console.log(this.state);
+               this.setState({value:value2, value1: value3});               
+                console.log(this.state);
 
-          //  });
+            });
 
           
 

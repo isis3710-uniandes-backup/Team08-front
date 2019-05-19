@@ -8,15 +8,16 @@ export default class ListaDonacion extends React.Component {
 	}
 
 	componentDidMount() {
-        fetch(' https://donu-back.herokuapp.com/articulos',{
+        fetch('https://donu-back.herokuapp.com/articulos',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
                 'Authorization':'Bearer '+localStorage.getItem('token')
+          
             }
         })
         .catch(error=>console.log(error))
-        .then(response=> response.json())
+        .then(response=> response.json()  )
         .then(myJson => {
             console.log(localStorage.getItem('token')+" este es el token");
             console.log(myJson);

@@ -68,6 +68,7 @@ export default class App1 extends  React.Component {
         headers:{
           'Content-Type':'application/json'
         }
+         
       })
       .then(res=>res.json())
       .then(myJson=>{

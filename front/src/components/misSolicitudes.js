@@ -16,7 +16,7 @@ export default class MisSolicitudes extends React.Component {
 
     componentDidMount() {
      
-        fetch(' https://donu-back.herokuapp.com/solicitud',{
+        fetch('https://donu-back.herokuapp.com/solicitud',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -55,7 +55,7 @@ console.log(userId1+"ppp");
   const requestOptions = {
     method: 'DELETE'
   };
-  const urlPrin = " https://donu-back.herokuapp.com/solicitud/"+userId1;
+  const urlPrin = "https://donu-back.herokuapp.com/solicitud/"+userId1;
 console.log(userId1);
   fetch(urlPrin,{
             method:'DELETE',
