@@ -2,10 +2,14 @@
 
 |<img src="https://ssaenz11.github.io/images/donu.jpg">|_Donu es una plataforma web que pretender facilitar el proceso de donaciones entre las personas y las ONG En esta plataforma pretendemos que tanto los usuario y las ong puedan decir los elementos que pueden donar y los que realmente necesitan._|
 |--|--|
-
 # VIDEO FUNCIONAMIENTO 
 
-https://www.youtube.com/watch?v=bWiXMrlHYp8&feature=youtu.be
+https://www.youtube.com/watch?v=sYNYBQvppGw&feature=youtu.be
+# URL DEL FRONT
+https://donu-front.firebaseapp.com/
+# URL DEL BACK 
+ https://donu-back.herokuapp.com
+
 # VIDEO FUNCIONAMIENTO INTERNACIONALIZACIÓN
 https://youtu.be/Gg8oqWaeiPU
 # INSTALACIÓN
