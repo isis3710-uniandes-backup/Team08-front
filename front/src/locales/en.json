@@ -9,6 +9,7 @@
 	"image1":"/images/imagen1_en.jpg",
 	"image2":"/images/imagen2_en.jpg",
 	"image3":"/images/imagen3_en.jpg",
+	"imagenPrincipal":"/images/imgPrincipal_en.jpg",
 	"about_donu":"About DONU",
 	"about_donu_description":"Donu is a web platform that aims to facilitate the donation process between people and NGOs. In this platform, we intend that both users and NGOs can say what they can donate and what they really need.",
 	"interested_donate":"Are you interested in donating?",
@@ -52,5 +53,6 @@
 	"my_form_button":"Create",
 	"footer_description":"We are a non-profit society that aims to facilitate the donation process.",
 	"footer_address":"Address",
-	"footer_email":"Email"
+	"footer_email":"Email",
+	"token_title":"Do you want to use our API? Use your token for validation"
 }

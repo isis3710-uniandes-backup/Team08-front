@@ -9,6 +9,7 @@
 	"image1":"/images/imagen1_es.jpg",
 	"image2":"/images/imagen2_es.jpg",
 	"image3":"/images/imagen3_es.jpg",
+	"imagenPrincipal":"/images/imgPrincipal_es.jpg",
 	"about_donu":"Acerca de DONU",
 	"about_donu_description":"Donu es una plataforma web que pretender facilitar el proceso de donaciones entre las personas y las ONG En esta plataforma pretendemos que tanto los usuario y las ONG puedan decir los elementos que pueden donar y los que realmente necesitan.",
 	"interested_donate":"¿Estás interesado en donar?",
@@ -52,5 +53,6 @@
 	"my_form_button":"Crear",
 	"footer_description":"Somos una sociedad sin ánimo de lucro que pretende facilitar el proceso de donación.",
 	"footer_address":"Dirección",
-	"footer_email":"Correo"	
+	"footer_email":"Correo",
+	"token_title":"¿Quieres acceder a nuestra API? Usa el token en tus peticiones"
 }

@@ -120,6 +120,17 @@ export default class App extends React.Component {
         );
   }
 
+  token=()=>{
+    return(
+        <div>
+            <h1 className="text-center">
+              <FormattedMessage id="token_title"/>
+            </h1>
+            <p className="text-center">Token: {localStorage.getItem('token')}</p>
+        </div> 
+          );
+  }
+
 
   Donar=()=>{
     return (<AgregarDonacion/>);
@@ -180,7 +191,7 @@ export default class App extends React.Component {
           <Route path="/donaciones/" component={this.Donaciones} />
           <Route path= "/misSolicitudes" component= {this.miSolicitudes}/>
           <Route path= "/soli" component= {this.soli}/>
-         
+          <Route path= "/token" component= {this.token}/>
   
         </Router>
       </IntlProvider>

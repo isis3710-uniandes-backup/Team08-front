@@ -70,9 +70,7 @@ export default class App1 extends  React.Component {
         }
       })
       .then(res=>res.json())
-      .catch(error => console.error(error))
       .then(myJson=>{
-        
         localStorage.setItem('token',myJson.token);
       })
     }
@@ -116,6 +114,9 @@ export default class App1 extends  React.Component {
                 <li className="nav-item">
                     <button id ="botoncito" type="button" className="btn btn-primary text-dark" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><FormattedMessage id="navbar_create_request"/></button>
                 </li> 
+                <li className="nav-item">
+                  <a className="nav-link text-dark" href="/token/">Token</a>
+                </li>
                 <li className="nav-item">
                  <Button
                     id="qsLogoutBtn"
@@ -200,9 +201,9 @@ export default class App1 extends  React.Component {
           </ul>
           <div id="negro" className="carousel-inner">
             <div className="carousel-item active">
-            <FormattedMessage id="image1">
+            <FormattedMessage id="imagenPrincipal">
             {src=>
-              <img className="demo0 img-fluid" src="../../public/images/imgPrincipal.jpg" alt={src}/>
+              <img className="demo0 img-fluid" src={src} alt={src}/>
             }
             </FormattedMessage>
                 
@@ -216,7 +217,7 @@ export default class App1 extends  React.Component {
               <div id="negrooo" className="centered2 carousel-caption d-none d-md-block"><h1 className="text-dark">.</h1></div>    
             </div>
             <div className="carousel-item">
-              <FormattedMessage id="image3">
+              <FormattedMessage id="image1">
               {src=>
                 <img className="demo0 img-fluid" src={src} alt={src}/>
               }
