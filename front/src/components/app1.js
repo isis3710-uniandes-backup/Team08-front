@@ -62,7 +62,7 @@ export default class App1 extends  React.Component {
     componentWillMount(){
 
     if(localStorage.getItem('token') == null){
-      fetch('/login',{
+      fetch('https://donu-back.herokuapp.com/login',{
         method:'POST',
         body:JSON.stringify({"username":"admin","password":"password"}),
         headers:{
@@ -72,6 +72,7 @@ export default class App1 extends  React.Component {
       .then(res=>res.json())
       .catch(error => console.error(error))
       .then(myJson=>{
+        
         localStorage.setItem('token',myJson.token);
       })
     }

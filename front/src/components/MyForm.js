@@ -46,7 +46,7 @@ handleSubmit(event) {
 
     };
 
-        fetch("/solicitud", {
+        fetch(" https://donu-back.herokuapp.com/solicitud", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

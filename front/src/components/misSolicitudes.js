@@ -16,7 +16,7 @@ export default class MisSolicitudes extends React.Component {
 
     componentDidMount() {
      
-        fetch('/solicitud',{
+        fetch(' https://donu-back.herokuapp.com/solicitud',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

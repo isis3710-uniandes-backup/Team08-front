@@ -8,7 +8,7 @@ export default class ListaDonacion extends React.Component {
 	}
 
 	componentDidMount() {
-        fetch('/articulos',{
+        fetch(' https://donu-back.herokuapp.com/articulos',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

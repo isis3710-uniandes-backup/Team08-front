@@ -15,7 +15,7 @@ export default class FormProduct extends React.Component {
 	    };
 
 	    if (donacion.name != "" && donacion.url_img !="" && donacion.quality != "" && donacion.description != ""){
-			fetch('/articulos/',{
+			fetch(' https://donu-back.herokuapp.com/articulos/',{
 		      method:'POST',
 		      body:JSON.stringify(donacion),
 		      headers:{

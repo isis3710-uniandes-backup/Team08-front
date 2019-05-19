@@ -14,7 +14,7 @@ handleSubmit(event) {
 
     //var canNueva = cantidadActual+1000;
 var userId1 = event.target.id;
-   fetch('/solicitud/'+userId1,{
+   fetch(' https://donu-back.herokuapp.com/solicitud/'+userId1,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -38,7 +38,7 @@ var userId1 = event.target.id;
 
 var y = JSON.stringify(myJson1);
 console.log("omeee"+y);
-                fetch("/solicitud/"+ userId1, {
+                fetch(" https://donu-back.herokuapp.com/solicitud/"+ userId1, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -62,7 +62,7 @@ alert("Succes");
 
     //var canNueva = cantidadActual+1000;
 var userId1 = event.target.id;
-   fetch('/solicitud/'+userId1)
+   fetch(' https://donu-back.herokuapp.com/solicitud/'+userId1)
              .then(function(response) {
                 
                  return response.json();
@@ -80,7 +80,7 @@ var userId1 = event.target.id;
 
 var y = JSON.stringify(myJson1);
 console.log("omeee"+y);
-                fetch("/solicitud/"+ userId1, {
+                fetch(" https://donu-back.herokuapp.com/solicitud/"+ userId1, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -102,7 +102,7 @@ console.log("omeee"+y);
 
     //var canNueva = cantidadActual+1000;
 var userId1 = event.target.id;
-   fetch('/solicitud/'+userId1)
+   fetch(' https://donu-back.herokuapp.com/solicitud/'+userId1)
              .then(function(response) {
                 
                  return response.json();
@@ -120,7 +120,7 @@ var userId1 = event.target.id;
 
 var y = JSON.stringify(myJson1);
 console.log("omeee"+y);
-                fetch("/solicitud/"+ userId1, {
+                fetch(" https://donu-back.herokuapp.com/solicitud/"+ userId1, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
