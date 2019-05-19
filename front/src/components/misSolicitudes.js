@@ -55,14 +55,18 @@ console.log(userId1+"ppp");
   const requestOptions = {
     method: 'DELETE'
   };
-
-  fetch("/solicitud/" + userId1,{
+  const urlPrin = " https://donu-back.herokuapp.com/solicitud/"+userId1;
+console.log(userId1);
+  fetch(urlPrin,{
             method:'DELETE',
             headers:{
-                'Authorization':localStorage.getItem('token')
+                'Authorization':'Bearer '+localStorage.getItem('token'),
+                 'Accept': 'application/json',
+                'Content-Type': 'application/json',
             }
         })
         .catch(error=>console.log(error)).then((response) => {
+          console.log(response+"rrr");
     
   }).then((result) => {
     

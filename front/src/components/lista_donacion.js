@@ -18,7 +18,8 @@ export default class ListaDonacion extends React.Component {
         .catch(error=>console.log(error))
         .then(response=> response.json())
         .then(myJson => {
-            console.log('dfsfasdfa');
+            console.log(localStorage.getItem('token')+" este es el token");
+            console.log(myJson);
         	var count = this.props.max;
         	var donaciones=[];
         	for(var donacion of myJson){

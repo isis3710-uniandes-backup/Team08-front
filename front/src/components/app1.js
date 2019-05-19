@@ -64,7 +64,7 @@ export default class App1 extends  React.Component {
     if(localStorage.getItem('token') == null){
       fetch('/login',{
         method:'POST',
-        body:JSON.stringify({username:'admin',password:'password'}),
+        body:JSON.stringify({"username":"admin","password":"password"}),
         headers:{
           'Content-Type':'application/json'
         }

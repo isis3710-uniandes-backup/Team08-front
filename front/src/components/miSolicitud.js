@@ -9,14 +9,16 @@ constructor(props) {
     this.handleClick = this.handleClick.bind(this);
     
   }
-
+state = {
+  'id':this.props.solicitud.id
+}
 
 handleClick = event => {
 
 var userId1 = event.target.id;
-  console.log("mira"+ userId1);
+  console.log("miraaaaaaa"+ this.props.solicitud.id);
 
-  this.props.handleSubmit(userId1);
+  this.props.handleSubmit(this.props.solicitud.id);
   
 }
 //onClick= {this.handleClick(x)}

@@ -43,14 +43,15 @@ console.log("omeee"+y);
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
+                'Authorization':'Bearer '+localStorage.getItem('token')
             },
             mode: "cors",
             body: y
         })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
-
+            .then(response => {response.json(); console.log("quejestooo")})
+            .then(data => console.log(data+ "funciona?"))
+            .catch(error => console.log(error +"se murioooooo"));
+alert("Succes");
              }).then(function(response){ window.location.href="/agregar_donacion/hecho";});
              
     } 
